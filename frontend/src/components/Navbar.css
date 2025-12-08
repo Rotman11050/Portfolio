@@ -1,0 +1,124 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(14, 24, 18, 0.82); /* deeper, contrasting shade */
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  z-index: 1000;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: inline-flex;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #b3f7c9;
+  text-decoration: none;
+  text-shadow: 0 0 14px rgba(179, 247, 201, 0.6);
+}
+
+.nav-logo:hover {
+  color: #e8fff1;
+  text-shadow: 0 0 18px rgba(179, 247, 201, 0.9);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0;
+}
+
+.nav-link {
+  color: #d4f0dd;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: #b3f7c9;
+}
+
+.nav-link.active {
+  color: #b3f7c9;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-2);
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+
+.flip-letter {
+  display: inline-block;
+  transform-origin: center top;
+  animation: flipIn 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* Flip animation like old departure boards */
+@keyframes flipIn {
+  0% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotateX(20deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+/*.nav-logo:hover .flip-letter {*/
+/*  animation: flipHover 0.3s ease;*/
+/*}*/
+
+/* Subtle flip on hover */
+@keyframes flipHover {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(30deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
