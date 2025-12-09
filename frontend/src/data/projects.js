@@ -30,7 +30,7 @@ const projects = [
         technologies: ["Arduino Uno", "C++", "ArduinoIDE"],
         thumbnailUrl: `${baseUrl}SlotMachine1.jpg`,
         featuredImageUrl: `${baseUrl}SlotMachine3.jpg`,
-        githubUrl: "https://github.com/yourusername/ecommerce", //TODO
+        githubUrl: "https://github.com/einfrog/tui_arduino_slot_machine",
         category: "Physical Computing",
         status: "in-progress",
         featured: true,
