@@ -17,11 +17,11 @@ function About() {
             <h2>Hello! 👋</h2>
             <p>
               I'm a passionate developer who loves creating beautiful and functional web applications.
-              I enjoy working with modern technologies and am always eager to learn new things.
+              I enjoy working with modern technologies and I am always eager to learn new things.
             </p>
             <p>
               My goal is to build projects that not only look great but also provide excellent user
-              experiences. I believe in writing clean, maintainable code and following best practices.
+              experiences or help me in my life. I believe in writing clean, maintainable code and following best practices.
             </p>
           </div>
 
