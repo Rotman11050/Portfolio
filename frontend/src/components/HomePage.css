@@ -184,17 +184,16 @@
 }
 
 .feature-card {
-  background: #f8f9fa;
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
+/*.feature-card:hover {*/
+/*  transform: translateY(-5px);*/
+/*  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);*/
+/*}*/
 
 .feature-icon {
   font-size: 3rem;
