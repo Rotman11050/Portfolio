@@ -1,3 +1,6 @@
+// Get base URL for GitHub Pages deployment
+const baseUrl = import.meta.env.BASE_URL;
+
 const projects = [
     {
         id: 1,
@@ -10,7 +13,7 @@ const projects = [
         githubUrl: "https://github.com/Rotman11050/Portofolio",
         liveUrl: "https://rotman11050.github.io/Portfolio",
         category: "Web Development",
-        status: "Ongoing",
+        status: "completed",
         featured: false,
         startDate: "2025-11-20",
         completionDate: ""
@@ -25,29 +28,29 @@ const projects = [
             "\n" +
             "I developed this project together with three classmates, collaborating on hardware assembly, code structure, and iterative testing. Through this work, we explored microcontroller programming, basic electronics, rapid prototyping, and user‑focused design. This project gave us hands‑on experience combining software, circuitry, and fabrication into a complete functional system.",
         technologies: ["Arduino Uno", "C++", "ArduinoIDE"],
-        thumbnailUrl: "/SlotMachine1.jpg",
-        featuredImageUrl: "/SlotMachine3.jpg",
+        thumbnailUrl: `${baseUrl}SlotMachine1.jpg`,
+        featuredImageUrl: `${baseUrl}SlotMachine3.jpg`,
         githubUrl: "https://github.com/yourusername/ecommerce", //TODO
         category: "Physical Computing",
-        status: "Ongoing",
+        status: "in-progress",
         featured: true,
         startDate: "2025-10-23",
         completionDate: ""
     },
     {
         id: 3,
-        title: "Children of Karin Aldamawiu’s (Browser 2D Game)",
+        title: "Children of Karin Aldamawiu's (Browser 2D Game)",
         shortDescription: "Browser-based 2D game built with HTML, CSS & JavaScript",
         description: "A small 2D browser game. The project includes an index.html, JS scripts, assets (spritesheets for player, enemies/NPCs), and CSS styling. " +
-            "The theme is a post-apocalyptic city called “Bilghrad”, where the player must collect a sacred relic while avoiding a gigantic tornados. The repo contains screenshots, " +
+            "The theme is a post-apocalyptic city called \"Bilghrad\", where the player must collect a sacred relic while avoiding a gigantic tornados. The repo contains screenshots, " +
             "spritesheets, gameplay and logic implemented in JavaScript. ",
         technologies: ["JavaScript", "HTML", "CSS","Git"],
-        thumbnailUrl: "/CCL1.1.png",
-        featuredImageUrl: "/CCL1.4.png",
+        thumbnailUrl: `${baseUrl}CCL1.1.png`,
+        featuredImageUrl: `${baseUrl}CCL1.4.png`,
         githubUrl: "https://github.com/Rotman11050/CCL1",
         liveUrl: "https://cc241023-21012.php.ustp.cloud/",
         category: "Browser Game",
-        status: "Completed",
+        status: "completed",
         featured: true,
         startDate: "2025-01-15",
         completionDate: "2025-02-02"
@@ -61,12 +64,12 @@ const projects = [
             "In that moment I realised that I want to build library which will bring those books to people who are willing to read them but can't buy" +
             "all of them. Main motto of that project would be: Free knowledge and education to everyone!",
         technologies: ["React", "CSS3", "JavaScript","Git","Node.js","Express"],
-        thumbnailUrl: "/Logo451.png",
-        featuredImageUrl: "/451.1.png",
+        thumbnailUrl: `${baseUrl}Logo451.png`,
+        featuredImageUrl: `${baseUrl}451.1.png`,
         githubUrl: "https://git.nwt.fhstp.ac.at/ccl/ss2025_ccl2_cc241023",
         liveUrl: "https://cc241023-10701.node.fhstp.cc/",
         category: "Web Development",
-        status: "Completed",
+        status: "completed",
         featured: true,
         startDate: "2025-06-10",
         completionDate: "2025-07-02"
@@ -79,10 +82,10 @@ const projects = [
             "of those champions and abilities in game. I realised that mobile app would be really good for all begginers." +
             "Included in that I would like to pull lores of champions in my application as well",
         technologies: ["Kotlin","Android Studio","AndroidIDE","Jetpack Compose"],
-        thumbnailUrl: "/lol.jpg",
-        featuredImageUrl: "/league-of-legends.webp",
+        thumbnailUrl: `${baseUrl}lol.jpg`,
+        featuredImageUrl: `${baseUrl}league-of-legends.webp`,
         category: "Mobile Development",
-        status: "Ongoing",
+        status: "in-progress",
         featured: false,
         startDate: "2025-12-01",
         completionDate: ""
