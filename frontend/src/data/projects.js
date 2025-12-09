@@ -8,7 +8,7 @@ const projects = [
         thumbnailUrl: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800",
         featuredImageUrl: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200",
         githubUrl: "https://github.com/Rotman11050/Portofolio",
-        liveUrl: "https://yourportfolio.com", //TODO
+        liveUrl: "https://rotman11050.github.io/Portfolio",
         category: "Web Development",
         status: "Ongoing",
         featured: false,
@@ -27,8 +27,7 @@ const projects = [
         technologies: ["Arduino Uno", "C++", "ArduinoIDE"],
         thumbnailUrl: "/SlotMachine1.jpg",
         featuredImageUrl: "/SlotMachine3.jpg",
-        githubUrl: "https://github.com/yourusername/ecommerce",
-        // liveUrl: "https://your-ecommerce-demo.com",
+        githubUrl: "https://github.com/yourusername/ecommerce", //TODO
         category: "Physical Computing",
         status: "Ongoing",
         featured: true,
@@ -46,7 +45,7 @@ const projects = [
         thumbnailUrl: "/CCL1.1.png",
         featuredImageUrl: "/CCL1.4.png",
         githubUrl: "https://github.com/Rotman11050/CCL1",
-        liveUrl: "cc241023-21012.php.fhstp.cc",  // as given in README
+        liveUrl: "https://cc241023-21012.php.ustp.cloud/",
         category: "Browser Game",
         status: "Completed",
         featured: true,
@@ -82,8 +81,6 @@ const projects = [
         technologies: ["Kotlin","Android Studio","AndroidIDE","Jetpack Compose"],
         thumbnailUrl: "/lol.jpg",
         featuredImageUrl: "/league-of-legends.webp",
-        githubUrl: "https://git.nwt.fhstp.ac.at/ccl/ss2025_ccl2_cc241023",
-        liveUrl: "https://cc241023-10701.node.fhstp.cc/",
         category: "Mobile Development",
         status: "Ongoing",
         featured: false,
