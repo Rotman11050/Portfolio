@@ -51,7 +51,7 @@ const projects = [
         liveUrl: "https://cc241023-21012.php.ustp.cloud/",
         category: "Browser Game",
         status: "completed",
-        featured: true,
+        featured: false,
         startDate: "2025-01-15",
         completionDate: "2025-02-02"
     },
@@ -89,6 +89,21 @@ const projects = [
         featured: false,
         startDate: "2025-12-01",
         completionDate: ""
+    },
+    {
+        id: 6,
+        title: "Website of my highschool",
+        shortDescription: "Site for my highschool built in a schools IT club",
+        description: "Worked on the animations and overall visual vibe of the school’s official website, collaborated " +
+            "with a small team on layout and interactive design elements, and helped maintain the site whenever needed..",
+        technologies: ["React", "CSS3", "JavaScript","Git","Node.js","Express"],
+        thumbnailUrl: `${baseUrl}GSS1.png`,
+        featuredImageUrl: `${baseUrl}GSS2.png`,
+        category: "Web Development",
+        status: "completed",
+        featured: true,
+        startDate: "2023-09-10",
+        completionDate: "2024-07-01"
     },
     // {
     //     id: 6,
