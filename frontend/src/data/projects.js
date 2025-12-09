@@ -99,6 +99,7 @@ const projects = [
         technologies: ["React", "CSS3", "JavaScript","Git","Node.js","Express"],
         thumbnailUrl: `${baseUrl}GSS1.png`,
         featuredImageUrl: `${baseUrl}GSS2.png`,
+        liveUrl: "https://gimnazijasvetisava.edu.rs/",
         category: "Web Development",
         status: "completed",
         featured: true,
