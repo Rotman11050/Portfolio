@@ -20,8 +20,8 @@ function About() {
               I enjoy working with modern technologies and I am always eager to learn new things.
             </p>
             <p>
-              My goal is to build projects that not only look great but also provide excellent user
-              experiences or help me in my life. I believe in writing clean, maintainable code and following best practices.
+              My goal is to build projects that not only look great but also help me in my life. I believe that through my
+              projects, I can also improve myself as a being and maybe even bring joy and help to others.
             </p>
           </div>
 
@@ -61,7 +61,7 @@ function About() {
           <div className="about-section">
             <h2>Get In Touch</h2>
             <p>
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+              I'm always open to discussing new projects, creative ideas, or opportunities and would love to be a part of your visions.
             </p>
             <div className="contact-info">
               <div className="contact-item">

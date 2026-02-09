@@ -80,7 +80,8 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.project-main-image img {
+.project-main-image img,
+.project-main-image video {
   width: 100%;
   height: auto;
   display: block;

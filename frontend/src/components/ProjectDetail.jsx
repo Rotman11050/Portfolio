@@ -43,7 +43,17 @@ function ProjectDetail() {
 
         <div className="project-content">
           <div className="project-main-image">
-            {project.featuredImageUrl ? (
+            {project.videoUrl ? (
+              <video
+                src={project.videoUrl}
+                controls
+                playsInline
+                poster={project.featuredImageUrl || project.thumbnailUrl}
+                aria-label={`Video: ${project.title}`}
+              >
+                Your browser does not support the video tag.
+              </video>
+            ) : project.featuredImageUrl ? (
               <img 
                 src={project.featuredImageUrl} 
                 alt={project.title}

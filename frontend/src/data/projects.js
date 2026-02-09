@@ -28,14 +28,15 @@ const projects = [
             "\n" +
             "I developed this project together with three classmates, collaborating on hardware assembly, code structure, and iterative testing. Through this work, we explored microcontroller programming, basic electronics, rapid prototyping, and user‑focused design. This project gave us hands‑on experience combining software, circuitry, and fabrication into a complete functional system.",
         technologies: ["Arduino Uno", "C++", "ArduinoIDE"],
-        thumbnailUrl: `${baseUrl}SlotMachine1.jpg`,
-        featuredImageUrl: `${baseUrl}SlotMachine3.jpg`,
+        thumbnailUrl: `${baseUrl}SlotMachineFinal.jpeg`,
+        featuredImageUrl: `${baseUrl}SlotMachineFinal.jpeg`,
+        videoUrl: `${baseUrl}slotmachineVideo.mp4`,
         githubUrl: "https://github.com/einfrog/tui_arduino_slot_machine",
         category: "Physical Computing",
-        status: "in-progress",
+        status: "completed",
         featured: true,
         startDate: "2025-10-23",
-        completionDate: ""
+        completionDate: "2026-01-12"
     },
     {
         id: 3,
@@ -85,14 +86,33 @@ const projects = [
         thumbnailUrl: `${baseUrl}lol.jpg`,
         featuredImageUrl: `${baseUrl}league-of-legends.webp`,
         category: "Mobile Development",
-        status: "in-progress",
+        status: "completed",
         featured: false,
         startDate: "2025-12-01",
-        completionDate: ""
+        completionDate: "2025-12-29"
+    },
+    {
+        id: 7,
+        title: "BriefBeer",
+        shortDescription: "Mobile app for all passionate beer drinkers",
+        description: "The idea for this project was born a year ago when me and my friend were just sitting on the terrace" +
+            "of our dorm, chitchatting how cool it would be to have an app where you could track beers that you tried from local" +
+            "breweries and pubs, since he couldn't keep a track of them manually. Back then we didn't really know much about mobile development" +
+            "or Kotlin at all. Now when we obtained some knowledge about it, we can present you BriefBeer. Documentation about the project you will " +
+            "find in the link below which will guid you through the depths of BriefBeer. Cheers! :))",
+        technologies: ["Kotlin","Android Studio","AndroidIDE","Jetpack Compose"],
+        thumbnailUrl: `${baseUrl}briefBeer.png`,
+        featuredImageUrl: `${baseUrl}briefBeer.png`,
+        githubUrl: "https://ccl3-ws2025-0bdf3b.pages.nwt.fhstp.ac.at/",
+        category: "Mobile Development",
+        status: "completed",
+        featured: false,
+        startDate: "2025-12-01",
+        completionDate: "2025-12-29"
     },
     {
         id: 6,
-        title: "Website of my highschool",
+        title: "Website of Grammar School 'Saint Sava'",
         shortDescription: "Site for my highschool built in a schools IT club",
         description: "Worked on the animations and overall visual vibe of the school’s official website, collaborated " +
             "with a small team on layout and interactive design elements, and helped maintain the site whenever needed..",

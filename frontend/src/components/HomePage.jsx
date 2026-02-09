@@ -15,7 +15,7 @@ function HomePage() {
             Hi, I'm <span className="highlight shine">Miloš Karapandžić</span>
           </h1>
           <p className="hero-subtitle">
-            I’m a Creative Computing student, combining design, technology, human-centered thinking, and creative problem-solving to build meaningful digital experiences.          </p>
+            I’m a Creative Computing student, combining design, technology and creative problem-solving to build meaningful digital experiences.          </p>
           <p className="hero-description">
             Welcome to my portfolio! Here you can explore my projects, see what I've been working on,
             and get in touch if you'd like to collaborate.
