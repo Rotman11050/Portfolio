@@ -102,7 +102,7 @@ const projects = [
             "find in the link below which will guid you through the depths of BriefBeer. Cheers! :))",
         technologies: ["Kotlin","Android Studio","AndroidIDE","Jetpack Compose"],
         thumbnailUrl: `${baseUrl}briefBeer.png`,
-        featuredImageUrl: `${baseUrl}briefBeer.png`,
+        featuredImageUrl: `${baseUrl}logo.png`,
         githubUrl: "https://ccl3-ws2025-0bdf3b.pages.nwt.fhstp.ac.at/",
         category: "Mobile Development",
         status: "completed",
