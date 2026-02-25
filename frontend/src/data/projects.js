@@ -1,4 +1,3 @@
-// Get base URL for GitHub Pages deployment
 const baseUrl = import.meta.env.BASE_URL;
 
 const projects = [
@@ -92,6 +91,22 @@ const projects = [
         completionDate: "2025-12-29"
     },
     {
+        id: 6,
+        title: "Website of Grammar School 'Saint Sava'",
+        shortDescription: "Site for my highschool built in a schools IT club",
+        description: "Worked on the animations and overall visual vibe of the school’s official website, collaborated " +
+            "with a small team on layout and interactive design elements, and helped maintain the site whenever needed..",
+        technologies: ["React", "CSS3", "JavaScript","Git","Node.js","Express"],
+        thumbnailUrl: `${baseUrl}GSS1.png`,
+        featuredImageUrl: `${baseUrl}GSS2.png`,
+        liveUrl: "https://gimnazijasvetisava.edu.rs/",
+        category: "Web Development",
+        status: "completed",
+        featured: true,
+        startDate: "2023-09-10",
+        completionDate: "2024-07-01"
+    },
+    {
         id: 7,
         title: "BriefBeer",
         shortDescription: "Mobile app for all passionate beer drinkers",
@@ -111,38 +126,20 @@ const projects = [
         completionDate: "2025-12-29"
     },
     {
-        id: 6,
-        title: "Website of Grammar School 'Saint Sava'",
-        shortDescription: "Site for my highschool built in a schools IT club",
-        description: "Worked on the animations and overall visual vibe of the school’s official website, collaborated " +
-            "with a small team on layout and interactive design elements, and helped maintain the site whenever needed..",
-        technologies: ["React", "CSS3", "JavaScript","Git","Node.js","Express"],
-        thumbnailUrl: `${baseUrl}GSS1.png`,
-        featuredImageUrl: `${baseUrl}GSS2.png`,
-        liveUrl: "https://gimnazijasvetisava.edu.rs/",
-        category: "Web Development",
+        id: 8,
+        title: "Recreation of a U-Net (2015) – Biomedical Image Segmentation",
+        shortDescription: "Recreated the original U-Net architecture.",
+        description: "Recreation of the original 2015 U-Net model. We trained the model on a breast ultrasound dataset (1,312 images with tumour masks), " +
+            "converted the images to grayscale, resized them to 128×128, and evaluated performance using IoU.",
+        technologies: ["Python", "TensorFlow/Keras", "U-Net", "CNN",],
+        paperUrl: `${baseUrl}UNet.pdf`,
+        category: "Computer Vision",
         status: "completed",
         featured: true,
-        startDate: "2023-09-10",
-        completionDate: "2024-07-01"
-    },
-    // {
-    //     id: 6,
-    //     title: "TraficSpeaker",
-    //     shortDescription: "Old traffic light repurposed for more fun time",
-    //     description: "Used the body of old traffic light for body of an speaker. Pretty tough project since vast majority" +
-    //         "of parts that were used were recycled parts from an old PC.",
-    //     technologies: ["Arduino Uno", "C++", "ArduinoIDE"],
-    //     thumbnailUrl: "/lol.jpg",
-    //     featuredImageUrl: "/league-of-legends.webp",
-    //     githubUrl: "https://git.nwt.fhstp.ac.at/ccl/ss2025_ccl2_cc241023",
-    //     liveUrl: "https://cc241023-10701.node.fhstp.cc/",
-    //     category: "Physical Computing",
-    //     status: "Ongoing",
-    //     featured: false,
-    //     startDate: "2024-09-01",
-    //     completionDate: "2025-07-01"
-    // }
+        startDate: "2025-11-30",
+        completionDate: "2025-12-10"
+    }
+
 
 ];
 
