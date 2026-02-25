@@ -119,6 +119,16 @@ function ProjectDetail() {
                   View Live Demo →
                 </a>
               )}
+              {project.paperUrl && (
+                <a
+                  href={project.paperUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link-btn paper"
+                >
+                  View Paper →
+                </a>
+              )}
             </div>
           </div>
         </div>
