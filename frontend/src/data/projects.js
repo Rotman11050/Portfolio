@@ -126,7 +126,7 @@ const projects = [
         completionDate: "2025-12-29"
     },
     {
-        id: 8,
+        id: 81,
         title: "Recreation of a U-Net (2015) – Biomedical Image Segmentation",
         shortDescription: "Recreated the original U-Net architecture.",
         description: "Recreation of the original 2015 U-Net model. We trained the model on a breast ultrasound dataset (1,312 images with tumour masks), " +
