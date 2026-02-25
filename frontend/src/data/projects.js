@@ -133,6 +133,8 @@ const projects = [
             "converted the images to grayscale, resized them to 128×128, and evaluated performance using IoU.",
         technologies: ["Python", "TensorFlow/Keras", "U-Net", "CNN",],
         paperUrl: `${baseUrl}UNet.pdf`,
+        thumbnailUrl: `${baseUrl}unet.png`,
+        featuredImageUrl: `${baseUrl}unet.png`,
         category: "Computer Vision",
         status: "completed",
         featured: true,
