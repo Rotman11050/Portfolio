@@ -43,18 +43,18 @@
 
 
 
-/* Project the language orbit around the forehead, with the rear half behind the cutout. */
+/* Transparent portrait and signature layout. */
 .portrait-wrap{top:57%;height:min(54svh,520px);isolation:isolate}
 .portrait-card{position:relative;z-index:1;border-radius:0;box-shadow:none;background:none;overflow:hidden}
 .portrait-card img{mask-image:linear-gradient(#000 84%,transparent 100%)}
 .portrait-shade{display:none}
-.language-halo{position:absolute;inset:0;padding:0;margin:0;list-style:none;pointer-events:none;z-index:auto}
-.language-bubble{position:absolute;left:47%;top:30%;transform:translate(-50%,-50%);padding:9px 14px;border:1px solid #f3c47780;border-radius:999px;background:#123b46f5;color:#f7e4c3;box-shadow:0 4px 16px #001c2a35;font:500 14px 'DM Mono',monospace;white-space:nowrap;will-change:transform,opacity}
+
+
 .signature{z-index:4;bottom:-9%}
-@media(max-width:1000px) and (min-width:651px){.language-bubble{font-size:12px;padding:8px 11px}}
-@media(max-width:650px){.portrait-wrap{top:50%;width:72vw;height:min(46svh,440px);min-height:300px}.language-bubble{font-size:11px;padding:7px 9px}.signature{right:-8%;bottom:-30%}.availability{font-size:11px;max-width:92%;white-space:normal;text-align:center}}
-@media(max-height:650px) and (min-width:651px){.portrait-wrap{top:58%;height:48svh}.language-bubble{padding:7px 10px;font-size:12px}}
-@media(prefers-reduced-motion:reduce){.language-bubble{will-change:auto}}
+
+@media(max-width:650px){.portrait-wrap{top:50%;width:72vw;height:min(46svh,440px);min-height:300px}.signature{right:-8%;bottom:-30%}.availability{font-size:11px;max-width:92%;white-space:normal;text-align:center}}
+@media(max-height:650px) and (min-width:651px){.portrait-wrap{top:58%;height:48svh}}
+
 
 /* HTML reveal layers avoid transforming SVG clipPath geometry during sticky scrolling. */
 .signature{aspect-ratio:620/350;filter:none}

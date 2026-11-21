@@ -36,7 +36,7 @@ function revealLine(line, progress) {
   setStyle(line.firstElementChild, 'transform', 'translate3d(' + offset + '%,0,0)');
 }
 function updatePortrait() {
-  // Geometry is measured on resize, not after the orbit has written styles each frame.
+  // Reuse cached geometry to keep scrolling lightweight.
   const scrollProgress = clamp((window.scrollY - sectionTop) / scrollDistance);
   const sceneProgress = motionPreference.matches ? 0 : clamp((scrollProgress - 0.65) / 0.35);
   const sceneValue = sceneProgress.toFixed(4);
@@ -72,65 +72,6 @@ updatePortrait();
 const textMotionToggle = document.querySelector('#toggle-text-motion');
 textMotionToggle.addEventListener('click', () => {
   const paused = document.querySelector('.backdrop-type').classList.toggle('is-paused');
-  portraitSection.classList.toggle('motion-paused', paused);
-  syncHaloAnimation();
   textMotionToggle.setAttribute('aria-pressed', String(paused));
-  textMotionToggle.textContent = paused ? 'Play motion' : 'Pause motion';
+  textMotionToggle.textContent = paused ? 'Play text' : 'Pause text';
 });
-
-// Front: right ear -> forehead -> left ear. Rear: recede behind the portrait.
-const orbitPortrait = document.querySelector('.portrait-wrap');
-const orbitBubbles = [...document.querySelectorAll('.language-bubble')];
-let orbitWidth = orbitPortrait.clientWidth;
-let orbitHeight = orbitPortrait.clientHeight;
-let orbitElapsed = 0;
-let orbitLastTime = null;
-let orbitFrame = null;
-let orbitInView = true;
-function paintHalo() {
-  const radiusX = Math.max(orbitWidth * 0.29, orbitHeight * 0.30);
-  const radiusY = orbitHeight * 0.145;
-  orbitBubbles.forEach((bubble, index) => {
-    const angle = orbitElapsed / 36000 * Math.PI * 2 + index / orbitBubbles.length * Math.PI * 2;
-    const depth = Math.sin(angle);
-    const x = radiusX * Math.cos(angle);
-    const y = -radiusY * depth;
-    const scale = depth >= 0 ? 0.82 + depth * 0.28 : 0.82 + depth * 0.14;
-    const opacity = depth >= 0 ? 1 : Math.max(0, 1 + depth * 3);
-    setStyle(bubble, 'opacity', opacity.toFixed(3));
-    setStyle(bubble, 'zIndex', depth >= 0 ? '3' : '0');
-    // Invisible bubbles need no transform updates until they approach an ear again.
-    if (opacity === 0) return;
-    setStyle(bubble, 'transform', 'translate(-50%, -50%) translate(' + x.toFixed(2) + 'px, ' + y.toFixed(2) + 'px) scale(' + scale.toFixed(3) + ')');
-  });
-}
-function orbitTick(time) {
-  if (orbitLastTime !== null) orbitElapsed += Math.min(64, time - orbitLastTime);
-  orbitLastTime = time;
-  paintHalo();
-  orbitFrame = requestAnimationFrame(orbitTick);
-}
-function syncHaloAnimation() {
-  const shouldRun = orbitInView && !document.hidden && !motionPreference.matches && !portraitSection.classList.contains('motion-paused');
-  if (shouldRun && orbitFrame === null) {
-    orbitLastTime = null;
-    orbitFrame = requestAnimationFrame(orbitTick);
-  } else if (!shouldRun && orbitFrame !== null) {
-    cancelAnimationFrame(orbitFrame);
-    orbitFrame = null;
-    orbitLastTime = null;
-  }
-}
-new ResizeObserver(() => {
-  orbitWidth = orbitPortrait.clientWidth;
-  orbitHeight = orbitPortrait.clientHeight;
-  paintHalo();
-}).observe(orbitPortrait);
-new IntersectionObserver(entries => {
-  orbitInView = entries[0].isIntersecting;
-  syncHaloAnimation();
-}).observe(portraitSection);
-document.addEventListener('visibilitychange', syncHaloAnimation);
-motionPreference.addEventListener('change', syncHaloAnimation);
-paintHalo();
-syncHaloAnimation();

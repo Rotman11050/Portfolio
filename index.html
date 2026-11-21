@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=8f6649bd52f0">
-  <link rel="stylesheet" href="portrait.css?v=618208873003">
+  <link rel="stylesheet" href="projects.css?v=9b20eb3f1f3d">
+  <link rel="stylesheet" href="portrait.css?v=261a7b7af766">
 </head>
 <body>
   <header class="site-header">
@@ -30,7 +31,6 @@
         <p class="availability">open for opportunities // available worldwide</p>
         <div class="side-note"><span class="eyebrow">SOFTWARE DEVELOPER</span><p>A curious mind.<br>A practical approach.</p><span class="note-rule"></span><span class="location">BASED IN AUSTRIA</span></div>
         <div class="portrait-wrap">
-          <ul class="language-halo" aria-label="Programming languages"><li class="language-bubble">Python</li><li class="language-bubble">C#</li><li class="language-bubble">Java</li><li class="language-bubble">Kotlin</li><li class="language-bubble">C++</li><li class="language-bubble">JavaScript</li><li class="language-bubble">SQL</li></ul>
           <div class="portrait-card"><img src="assets/portrait-cutout.png" alt="Miloš Karapandžić smiling, wearing a dark suit and tie" fetchpriority="high" width="1254" height="1254"><div class="portrait-shade"></div></div>
           <div class="signature" role="img" aria-label="Miloš Karapandžić, cursive signature">
             <div class="signature-window signature-first"><div class="signature-content"><svg viewBox="0 0 620 350" aria-hidden="true"><text class="first-name" x="302" y="136" text-anchor="middle">Miloš</text></svg></div></div>
@@ -39,62 +39,102 @@
           </div>
         </div>
         <div class="floating-tag tag-bottom" aria-hidden="true">Code. Intelligence. Innovation.</div>
-        <div class="stage-bottom"><span>SCROLL TO EXPLORE <i></i></span><div class="stage-controls"><button class="motion-toggle" id="toggle-text-motion" type="button" aria-pressed="false">Pause motion</button></div></div>
+        <div class="stage-bottom"><span>SCROLL TO EXPLORE <i></i></span><div class="stage-controls"><button class="motion-toggle" id="toggle-text-motion" type="button" aria-pressed="false">Pause text</button></div></div>
       </div>
     </section>
 
     <section class="section projects-section" id="projects">
-      <div class="section-heading">
-        <p class="eyebrow">SELECTED WORK</p><h2>Projects</h2>
-        <p class="section-lead">A selection of software, machine-learning and engineering projects.</p>
-      </div>
+      <div class="section-heading"><p class="eyebrow">SELECTED WORK</p><h2>Projects</h2><p class="section-lead">Software, machine learning, mobile apps and physical prototypes — from first ideas to working projects.</p></div>
       <div class="project-grid">
-        <article class="project-card project-featured">
-          <div class="project-number">01</div>
+        <article class="project-card project-wide" id="project-elecom">
+          <div class="project-number" aria-hidden="true">01</div>
+          <div class="project-content">
+            <p class="project-type">RESEARCH INTERNSHIP · AUDIO PROCESSING · MACHINE LEARNING</p>
+            <h3>ELECOM — Elephant Vocalisation Analysis</h3>
+            <p>Developed and extended tools for analysing elephant vocalisations, supporting research into cohesion and coordination calls.</p>
+            <div class="chips"><span>Python</span><span>MATLAB</span><span>NumPy</span><span>SciPy</span><span>scikit-learn</span><span>PyTorch</span><span>SpectraLayers</span></div>
+            <details class="project-details"><summary aria-label="Details about ELECOM — Elephant Vocalisation Analysis">Project details</summary><p>The workflow combined manual annotation, contour-guided audio filtering, acoustic feature extraction and machine-learning experiments.</p><p>Improved a MATLAB annotation tool for tracing calls in spectrograms. Built Python tools for preparing recordings, matching annotations to separated audio and comparing processing methods.</p><p>Explored call classification using acoustic features, logistic regression and an EfficientNet-based neural network.</p></details>
+
+          </div>
+          <div class="project-visual visual-audio" aria-hidden="true"><div class="waveform"></div><small>ACOUSTIC SIGNAL ANALYSIS</small></div>
+        </article>
+
+        <article class="project-card project-wide" id="project-saint-sava">
+          <div class="project-number" aria-hidden="true">02</div>
+          <div class="project-content">
+            <p class="project-type">WEB DEVELOPMENT · ONGOING MAINTENANCE</p>
+            <h3>Saint Sava Grammar School Website</h3>
+            <p>Contributed animations and visual design to my school’s official website, which I continue to maintain with two friends.</p>
+            <div class="chips"><span>React</span><span>JavaScript</span><span>CSS</span><span>Git</span></div>
+            <details class="project-details"><summary aria-label="Details about Saint Sava Grammar School Website">Project details</summary><p>Worked on the layout and interactive design elements, focusing on animations and the overall visual feel. Together with two friends, I continue to maintain the website and add content and features at the school’s request.</p></details>
+            <div class="project-links"><a href="https://gimnazijasvetisava.edu.rs/" target="_blank" rel="noopener noreferrer">Visit website</a></div>
+          </div>
+          <div class="project-visual visual-school" aria-hidden="true"><div class="school-mark"><span>Saint Sava</span><small>LEARN. CREATE. CONNECT.</small><i></i><i></i><i></i></div></div>
+        </article>
+
+        <article class="project-card project-featured" id="project-unet">
+          <div class="project-number" aria-hidden="true">03</div>
           <div class="project-content">
             <p class="project-type">AI · COMPUTER VISION</p>
             <h3>U-Net: Biomedical Image Segmentation</h3>
-            <p>Recreated the U-Net architecture for biomedical image segmentation, exploring a foundational approach to deep-learning-based image analysis.</p>
+            <p>Recreated the U-Net architecture and trained it to segment breast ultrasound images.</p>
             <div class="chips"><span>Python</span><span>TensorFlow / Keras</span><span>U-Net</span><span>CNN</span></div>
-            <p class="project-note">Academic project · Completed</p>
+            <details class="project-details"><summary aria-label="Details about U-Net: Biomedical Image Segmentation">Project details</summary><p>Explored the original 2015 architecture, preprocessed ultrasound images and tumour masks, resized inputs to 128 × 128, and evaluated segmentation using intersection over union (IoU). The project report contains the methodology.</p></details>
+            <div class="project-links"><a href="assets/projects/unet-report.pdf" target="_blank" rel="noopener noreferrer">Read report (PDF)</a></div>
           </div>
-          <div class="project-visual visual-unet"><span>INPUT</span><b>U-NET</b><span>SEGMENTATION</span></div>
+          <div class="project-visual visual-unet" aria-hidden="true"><span>INPUT</span><b>U-NET</b><span>SEGMENTATION</span></div>
         </article>
 
-        <article class="project-card">
-          <div class="project-number">02</div>
+        <article class="project-card" id="project-slot-machine">
+          <div class="project-number" aria-hidden="true">04</div>
           <div class="project-content">
             <p class="project-type">PHYSICAL COMPUTING</p>
             <h3>Arduino Slot Machine</h3>
-            <p>A non-monetary physical prototype combining Arduino, C++, LED reels, coin detection and a 3D-printed coin mechanism.</p>
-            <div class="chips"><span>Arduino Uno</span><span>C++</span><span>3D printing</span></div>
-            <p class="project-note">Prototype · Completed</p>
+            <p>A physical slot-machine prototype with LED reels, a lever and custom 3D-printed coins.</p>
+            <div class="chips"><span>Arduino Uno</span><span>C++</span><span>Electronics</span><span>3D printing</span></div>
+            <details class="project-details"><summary aria-label="Details about Arduino Slot Machine">Project details</summary><p>Built with three classmates, combining hardware assembly, microcontroller programming and iterative testing. The Arduino handles coin detection, reel logic, lighting effects and win conditions. The prototype uses custom coins rather than money.</p><video controls playsinline preload="none" poster="assets/projects/slot-machine.jpeg" aria-label="Arduino slot machine demonstration"><source src="assets/projects/slot-machine-demo.mp4" type="video/mp4">Your browser cannot play this video. <a href="assets/projects/slot-machine-demo.mp4">Download the demonstration</a>.</video></details>
+            <div class="project-links"><a href="https://github.com/einfrog/tui_arduino_slot_machine" target="_blank" rel="noopener noreferrer">Source code</a></div>
           </div>
-          <div class="project-visual visual-slot"><div class="leds"></div><div class="screen">READY TO PLAY</div></div>
+          <div class="project-visual visual-slot" aria-hidden="true"><div class="leds"></div><div class="screen">READY TO PLAY</div></div>
         </article>
 
-        <article class="project-card">
-          <div class="project-number">03</div>
+        <article class="project-card" id="project-library-451">
+          <div class="project-number" aria-hidden="true">05</div>
           <div class="project-content">
             <p class="project-type">WEB DEVELOPMENT</p>
             <h3>Web Library – 451</h3>
-            <p>A digital library concept designed to make public-domain classic literature accessible online.</p>
-            <div class="chips"><span>React</span><span>CSS</span><span>JavaScript</span><span>Git</span></div>
-            <p class="project-note">Web application · Completed</p>
+            <p>A digital library designed to make public-domain classic literature easier to discover and read.</p>
+            <div class="chips"><span>React</span><span>JavaScript</span><span>CSS</span><span>Node.js</span><span>Express</span></div>
+            <details class="project-details"><summary aria-label="Details about Web Library – 451">Project details</summary><p>Inspired by Fahrenheit 451 and the idea of making knowledge accessible. The application brings classic literature into a browsable online library, with a React interface and a Node.js / Express stack.</p></details>
+            <div class="project-links"><a href="https://git.nwt.fhstp.ac.at/ccl/ss2025_ccl2_cc241023" target="_blank" rel="noopener noreferrer">Source code</a></div>
           </div>
-          <div class="project-visual visual-library"><span>451</span><small>READ. DISCOVER. ACCESS.</small></div>
+          <div class="project-visual visual-library" aria-hidden="true"><span>451</span><small>READ. DISCOVER. ACCESS.</small></div>
         </article>
 
-        <article class="project-card project-wide">
-          <div class="project-number">04</div>
+        <article class="project-card" id="project-briefbeer">
+          <div class="project-number" aria-hidden="true">06</div>
           <div class="project-content">
-            <p class="project-type">RESEARCH · PYTHON · MATLAB</p>
-            <h3>Acoustic Data Analysis — ELECOM Research Internship</h3>
-            <p>Worked with acoustic recordings, including processing, annotation and analysis using Python and MATLAB. Tasks included spectrogram analysis and machine-learning-related work.</p>
-            <div class="chips"><span>Python</span><span>MATLAB</span><span>Signal analysis</span><span>Machine learning</span></div>
-            <p class="project-note">Research internship · Details to be expanded</p>
+            <p class="project-type">ANDROID DEVELOPMENT · GAMIFIED SOCIAL APP</p>
+            <h3>BriefBeer</h3>
+            <p>A gamified social app for discovering beers, sharing reviews and connecting with friends.</p>
+            <div class="chips"><span>Kotlin</span><span>Jetpack Compose</span><span>Android Studio</span></div>
+            <details class="project-details"><summary aria-label="Details about BriefBeer">Project details</summary><p>Developed with a friend after discussing how difficult it was to remember beers tried at local breweries and pubs. Users could connect with friends, record and review beers, and submit new beers to the shared database for review before publication.</p><p>Achievements rewarded users with new profile pictures, adding a game element to discovering and recording beers.</p></details>
+            <div class="project-links"><a href="https://ccl3-ws2025-0bdf3b.pages.nwt.fhstp.ac.at/" target="_blank" rel="noopener noreferrer">Project documentation</a></div>
           </div>
-          <div class="project-visual visual-audio"><div class="waveform"></div><small>ACOUSTIC SIGNAL ANALYSIS</small></div>
+          <div class="project-visual visual-mobile visual-beer" aria-hidden="true"><div class="phone-outline"><span class="phone-speaker"></span><strong>BriefBeer</strong><span class="phone-divider"></span><small>YOUR BEER JOURNAL</small></div></div>
+        </article>
+
+        <article class="project-card" id="project-arcane-atlas">
+          <div class="project-number" aria-hidden="true">07</div>
+          <div class="project-content">
+            <p class="project-type">ANDROID DEVELOPMENT</p>
+            <h3>ArcaneAtlas</h3>
+            <p>A League of Legends companion that connects to a player’s account and displays match information during the loading screen.</p>
+            <div class="chips"><span>Kotlin</span><span>Jetpack Compose</span><span>Android Studio</span></div>
+            <details class="project-details"><summary aria-label="Details about ArcaneAtlas">Project details</summary><p>Created around the needs of a friend who was learning the game. Users could connect their League of Legends account and, when a match reached the loading screen, see other players’ account data, their champions’ abilities and each player’s mastery on their chosen champion.</p></details>
+
+          </div>
+          <div class="project-visual visual-mobile visual-atlas" aria-hidden="true"><div class="phone-outline"><span class="phone-speaker"></span><strong>AA</strong><span class="phone-divider"></span><small>CHAMPION COMPANION</small></div></div>
         </article>
       </div>
     </section>
@@ -155,6 +195,6 @@
     </section>
   </main>
   <footer><span>© <span id="year"></span> Miloš Karapandžić</span><span>Designed with curiosity. Built with code.</span></footer>
-  <script src="script.js?v=127fb82d4e55"></script>
+  <script src="script.js?v=712a5b2ab982"></script>
 </body>
 </html>
