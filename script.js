@@ -166,7 +166,6 @@ aboutTabs.forEach((tab, index) => {
 const experienceTrack = document.querySelector('#experience-track');
 const timelineSection = document.querySelector('.experience-timeline');
 const timelineScene = timelineSection.querySelector('.timeline-scene');
-const timelineHint = document.querySelector('#timeline-hint');
 let timelineStart = 0;
 let timelineTravel = 0;
 let timelinePinned = false;
@@ -192,9 +191,6 @@ function measureTimeline() {
   timelineSection.classList.toggle('is-pinned', timelinePinned);
   timelineSection.style.setProperty('--timeline-height', (sceneHeight + timelineTravel + timelineHold * 2) + 'px');
   timelineStart = timelineSection.getBoundingClientRect().top + window.scrollY;
-  timelineHint.textContent = timelinePinned
-    ? 'Scroll down to follow my journey. When focused, use the left and right arrow keys.'
-    : 'Scroll or swipe across my journey. When focused, use the left and right arrow keys.';
   scheduleTimeline();
 }
 window.addEventListener('scroll', scheduleTimeline, { passive: true });

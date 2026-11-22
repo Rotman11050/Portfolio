@@ -16,6 +16,8 @@
 .cv-preview-document:focus-visible{outline:3px solid var(--tomato);outline-offset:-3px}
 @media(max-width:600px){.cv-preview{width:96vw;max-width:96vw;height:94vh;height:94dvh}.cv-preview-toolbar{padding:12px 14px}.cv-preview-toolbar h2{font-size:1rem}.cv-preview-actions{padding:6px 14px;gap:4px 18px}}
 .experience-overview{position:relative;z-index:2;margin-top:72px}
+.experience .experience-timeline{margin-top:32px}
+.experience .timeline-scene{border-top:0;padding-top:16px}
 .experience-intro{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:32px}
 .experience-intro h3{font-size:clamp(2rem,3.6vw,3.5rem);letter-spacing:-.055em;line-height:1.12;margin:14px 0 0;max-width:750px}
 #selected-experience-heading{scroll-margin-top:70px}
