@@ -11,6 +11,16 @@
 .contact-form .contact-form-note{color:var(--charcoal)}
 .contact-form .button-orange{background:var(--tomato);color:var(--charcoal);box-shadow:0 3px 12px #113f4a18}
 .contact-form .button-orange:hover{background:#f56b45}
+.contact-simple{max-width:650px;margin:96px auto 0;text-align:center}
+.contact-simple .contact-direct{margin:0;color:var(--sea);font-size:1rem}
+.contact-copy-button{display:inline-flex;align-items:center;min-height:44px;padding:4px 6px;border:0;background:none;color:var(--sea);font:700 1rem Manrope,sans-serif;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.contact-copy-button:hover{color:#a63b21}
+.contact-copy-button:focus-visible{outline:3px solid var(--sea);outline-offset:3px;border-radius:3px}
+.contact-copy-status{margin:4px 0 0;font-size:.8rem;color:var(--sea);overflow-wrap:anywhere}
+.contact-copy-status:empty{display:none}
+.contact-simple .contact-links{margin-top:12px;font-size:.875rem}
+.contact-simple .contact-links a{padding:8px 0;font-weight:600}
+@media(max-width:600px){.contact-simple{margin-top:80px}}
 @media(max-width:900px){.monogram-anchor{height:270px;margin-top:16px}}
 @media(max-width:600px){.monogram-anchor{height:230px;margin-top:12px}}
 @media(prefers-reduced-motion:reduce){.monogram-flight{transform:none!important}.monogram-viewport{display:none}}

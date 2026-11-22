@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="25 25 560 280" fill="none" aria-hidden="true" focusable="false">
+                <defs>
+                  <linearGradient id="logo-mk-orange" x1="150" y1="40" x2="360" y2="300" gradientUnits="userSpaceOnUse"><stop stop-color="#ffb36b"/><stop offset=".32" stop-color="#f97935"/><stop offset=".65" stop-color="#ee5c35"/><stop offset="1" stop-color="#b43214"/></linearGradient>
+                  <linearGradient id="logo-mk-shine" x1="0" y1="60" x2="0" y2="275" gradientUnits="userSpaceOnUse"><stop stop-color="#fff0cf" stop-opacity=".9"/><stop offset=".45" stop-color="#ffd5ad" stop-opacity=".35"/><stop offset="1" stop-color="#fff0cf" stop-opacity="0"/></linearGradient>
+                  <path id="logo-mk-letter-m" pathLength="1" d="M78 238C37 239 27 192 56 177C82 164 97 190 78 201C65 208 59 198 71 171L122 76C143 34 166 38 154 86L117 225C136 177 169 94 191 82C209 73 214 92 205 119L176 220C201 176 239 111 260 112C280 113 275 137 262 160L233 222C219 254 240 271 273 244"/>
+                  <path id="logo-mk-letter-k" pathLength="1" d="M299 240C307 187 327 109 345 63C358 29 383 36 372 68C354 105 328 126 310 127M318 174C355 143 408 91 437 69C449 60 463 56 465 67C466 81 443 91 431 88M326 165C365 150 395 183 417 218C445 262 484 271 535 248"/>
+                  <path id="logo-mk-sweep" pathLength="1" d="M133 280C248 253 413 263 526 284C550 289 560 286 568 278"/>
+                </defs>
+                <g stroke-linecap="round" stroke-linejoin="round">
+                  <g><use href="#logo-mk-letter-m" stroke="#9d321b" stroke-width="12" transform="translate(1 4)"/><use href="#logo-mk-letter-m" stroke="url(#logo-mk-orange)" stroke-width="10"/><use href="#logo-mk-letter-m" stroke="url(#logo-mk-shine)" stroke-width="2" transform="translate(-1 -2)"/></g>
+                  <g><use href="#logo-mk-letter-k" stroke="#9d321b" stroke-width="12" transform="translate(1 4)"/><use href="#logo-mk-letter-k" stroke="url(#logo-mk-orange)" stroke-width="10"/><use href="#logo-mk-letter-k" stroke="url(#logo-mk-shine)" stroke-width="2" transform="translate(-1 -2)"/></g>
+                  <g><use href="#logo-mk-sweep" stroke="#9d321b" stroke-width="7" transform="translate(1 3)"/><use href="#logo-mk-sweep" stroke="url(#logo-mk-orange)" stroke-width="5"/></g>
+                </g>
+              </svg>

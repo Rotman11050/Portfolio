@@ -9,18 +9,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=about-cv-1">
+  <link rel="stylesheet" href="styles.css?v=monogram-nav-15">
   <link rel="stylesheet" href="projects.css?v=blue-projects-5">
-  <link rel="stylesheet" href="about.css?v=light-about-4">
-  <link rel="stylesheet" href="monogram.css?v=mk-glass-orange-6">
+  <link rel="stylesheet" href="about.css?v=cv-preview-13">
+  <link rel="stylesheet" href="monogram.css?v=simple-contact-links-9">
   <link rel="stylesheet" href="portrait.css?v=signature-hold-7">
 </head>
 <body>
   <header class="site-header">
-    <a class="wordmark" href="#home" aria-label="Milos Karapandzic home">MK<span>.</span></a>
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    <a class="wordmark" href="#home" aria-label="Milos Karapandzic home"><img src="assets/mk-logo.svg" width="64" height="32" alt=""></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-controls="main-navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="main-navigation" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Tools</a><a href="#contact">Contact</a>
     </nav>
   </header>
 
@@ -31,7 +31,7 @@
         <div class="ambient-circle" aria-hidden="true"></div>
         <div class="backdrop-type" aria-hidden="true"><div class="backdrop-row"><div class="backdrop-track"><div class="backdrop-group"><span>Curious by nature.</span><i>·</i><span>Builder by practice.</span><i>·</i><span>Team player.</span><i>·</i><span>Taking ownership in every step.</span><i>·</i><span>Learning by doing.</span><i>·</i><span>Building with purpose.</span><i>·</i><span>Asking better questions.</span><i>·</i><span>Solving real problems.</span><i>·</i></div><div class="backdrop-group"><span>Curious by nature.</span><i>·</i><span>Builder by practice.</span><i>·</i><span>Team player.</span><i>·</i><span>Taking ownership, every step.</span><i>·</i><span>Learning by doing.</span><i>·</i><span>Building with purpose.</span><i>·</i><span>Asking better questions.</span><i>·</i><span>Solving real problems.</span><i>·</i></div></div></div><div class="backdrop-row"><div class="backdrop-track backdrop-track-reverse"><div class="backdrop-group"><i>·</i><span>Clear communication.</span><i>·</i><span>Sharing what I learn.</span><i>·</i><span>Thinking things through.</span><i>·</i><span>Details matter.</span><i>·</i><span>From idea to outcome.</span><i>·</i><span>Ready to contribute.</span><i>·</i><span>Always improving.</span><i>·</i></div><div class="backdrop-group"><span>Clear communication.</span><i>·</i><span>Sharing what I learn.</span><i>·</i><span>Thinking things through.</span><i>·</i><span>Details matter.</span><i>·</i><span>From idea to outcome.</span><i>·</i><span>Ready to contribute.</span><i>·</i><span>Always improving.</span><i>·</i></div></div></div></div>
         <p class="availability">open for opportunities // available worldwide</p>
-        <div class="side-note"><span class="eyebrow">SOFTWARE DEVELOPER</span><p>A curious mind.<br>A practical approach.</p><span class="note-rule"></span><span class="location">BASED IN AUSTRIA</span></div>
+        <div class="side-note"><span class="eyebrow">SOFTWARE DEVELOPER</span><p>A curious mind.<br>A practical approach.</p></div>
         <div class="portrait-wrap">
           <div class="portrait-card"><img src="assets/portrait-cutout.png" alt="Miloš Karapandžić smiling, wearing a dark suit and tie" fetchpriority="high" width="1254" height="1254"><div class="portrait-shade"></div></div>
           <div class="signature" role="img" aria-label="Miloš Karapandžić, cursive signature">
@@ -43,7 +43,6 @@
         <div class="floating-tag tag-bottom" aria-hidden="true">Code. Creativity. Innovation.</div>
         <div class="floating-tag tag-apex" aria-hidden="true">Learn. Build. Improve.</div>
         <div class="floating-tag tag-right" aria-hidden="true">Teamwork. Ownership. Growth.</div>
-        <div class="stage-bottom"><span>SCROLL TO EXPLORE <i></i></span></div>
       </div>
     </section>
 
@@ -56,7 +55,7 @@
             <p>I’m <strong>Miloš</strong>, a Creative Computing student and aspiring software developer. I enjoy understanding complex problems, building practical solutions and taking ownership of the work in front of me.</p>
             <p>Originally from Serbia and studying in Austria, I’m working toward a career in <strong>software engineering</strong>, with a strong interest in backend development, full-stack products and applied AI.</p>
           </div>
-          <div class="about-actions"><a class="button button-orange" href="assets/documents/Milos-Karapandzic-CV.pdf" download>Download CV (PDF)</a><a class="button about-connect" href="#contact">Let’s connect</a></div>
+          <div class="about-actions"><a class="button button-orange" id="preview-cv" href="assets/documents/Milos-Karapandzic-CV.pdf" target="_blank" rel="noopener noreferrer" aria-haspopup="dialog">Preview CV</a><a class="button about-connect" href="#contact">Let’s connect</a></div>
           <div class="about-facts">
             <div><strong>Education</strong><span>Creative Computing<br>USTP, St. Pölten</span></div>
             <div><strong>Academic standing</strong><span>Top of my class<br>with 1.3 Austrian average<small>≈ 3.7/4.0 GPA</small></span></div>
@@ -107,23 +106,31 @@
           </div>
         </div>
       </div>
+      <section class="experience-overview" aria-labelledby="selected-experience-heading">
+<div class="experience-intro"><div><p class="eyebrow">SELECTED EXPERIENCE</p><h3 id="selected-experience-heading">Research. Real-world work.<br>People skills.</h3></div></div>
+<section class="experience-selected" aria-label="Featured roles">
+<a href="#role-elecom" class="experience-primary"><span class="experience-meta">Research internship · Jul–Sep 2026</span><h4>Data, audio &amp;<br>machine learning.</h4><p class="experience-org">ELECOM · USTP, St. Pölten</p><p class="experience-summary">Developed tools for analysing elephant vocalisations, from spectrogram annotation to classification experiments.</p><div class="experience-skills">Python · MATLAB · Machine learning<span class="experience-view">Read about this experience</span></div></a>
+<a href="#role-web"><span class="experience-meta">Web development · 2023–2024</span><h4>Building for a real community.</h4><p class="experience-org">Sveti Sava · School website</p><p class="experience-summary">Developed animations and refined the interface. I still maintain the website with two friends.</p><div class="experience-skills">Interface design · Ongoing maintenance<span class="experience-view">Read about this experience</span></div></a>
+<a href="#role-tutor"><span class="experience-meta">Mathematics tutor · 2020–2024</span><h4>Making complex<br>ideas click.</h4><p class="experience-org">Individual &amp; small-group tutoring</p><p class="experience-summary">Helped secondary school students understand mathematics through clear steps and explanations that fit each learner.</p><div class="experience-skills">Problem-solving · Communication<span class="experience-view">Read about this experience</span></div></a>
+</section>
+      </section>
       <section class="experience-timeline" aria-labelledby="experience-heading">
         <div class="timeline-scene">
         <div class="timeline-heading">
-          <div><p class="eyebrow">WORK &amp; EDUCATION</p><h3 id="experience-heading">The experience behind the ambition.</h3></div>
+          <div><p class="eyebrow">WORK &amp; EDUCATION</p><h3 id="experience-heading">The full journey.</h3></div>
 
         </div>
-        <p class="timeline-hint" id="timeline-hint">Scroll down to follow my journey. When focused, use the left and right arrow keys.</p>
+        <p class="timeline-hint">Let's go back, way back, back into time</p>
         <div class="timeline-scroll" id="experience-track" role="region" aria-label="Work and education timeline" aria-describedby="timeline-hint" tabindex="0">
           <ol class="timeline-list">
             <li class="timeline-item"><p class="timeline-date">SUMMERS 2017–2022</p><div class="timeline-card"><span class="timeline-category">WORK</span><h4>Installation Assistant</h4><p class="timeline-organisation">Air-conditioning systems</p><p class="timeline-summary">Assisted experienced technicians with installations in large facilities.</p><div class="timeline-learning"><h5>What I learned</h5><p>Hands-on problem-solving, working carefully with a technical team and understanding how individual tasks fit into a larger installation.</p></div></div></li>
             <li class="timeline-item"><p class="timeline-date">SEP 2020 – JUN 2024</p><div class="timeline-card"><span class="timeline-category category-study">EDUCATION</span><h4>Computer Science &amp; Informatics</h4><p class="timeline-organisation">Sveti Sava Grammar School · Belgrade</p><p class="timeline-summary">Studied in the class for students with special abilities in computer science and informatics.</p><div class="timeline-learning"><h5>What I learned</h5><p>Analytical thinking and a foundation in computing that gave me the confidence to pursue software development.</p></div></div></li>
-            <li class="timeline-item timeline-highlight"><p class="timeline-date">SEP 2020 – SEP 2024</p><div class="timeline-card"><svg class="timeline-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 5H10l8 11-8 11h12M3 16h5M5.5 13.5v5"/></svg><span class="timeline-category">WORK</span><h4>Private Mathematics Tutor</h4><p class="timeline-organisation">Individual &amp; small-group tutoring</p><p class="timeline-summary">Supported secondary school students with mathematics.</p><div class="timeline-learning"><h5>What I learned</h5><p>Breaking complex problems into clear steps, adapting explanations to different learners and being patient when an idea takes time to click.</p></div></div></li>
-            <li class="timeline-item timeline-highlight"><p class="timeline-date">SEP 2023 – AUG 2024</p><div class="timeline-card"><svg class="timeline-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 24C5 5 27 27 27 8M5 24l-2 5 5-2M27 8l2-5-5 2"/><circle cx="5" cy="24" r="2"/><circle cx="27" cy="8" r="2"/><path d="M9 9h4v4H9zM19 19h4v4h-4z"/></svg><span class="timeline-category">WEB DEVELOPMENT</span><h4>Frontend Developer</h4><p class="timeline-organisation">Sveti Sava · Official school website</p><p class="timeline-summary">Developed animations and refined the website’s interface. I continue to maintain it with two friends.</p><div class="timeline-learning"><h5>What I learned</h5><p>Balancing animation with usability, keeping a consistent visual design and turning requests into practical website updates.</p></div></div></li>
+            <li class="timeline-item timeline-highlight" tabindex="-1" id="role-tutor"><p class="timeline-date">SEP 2020 – SEP 2024</p><div class="timeline-card"><svg class="timeline-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 5H10l8 11-8 11h12M3 16h5M5.5 13.5v5"/></svg><span class="timeline-category">WORK</span><h4>Private Mathematics Tutor</h4><p class="timeline-organisation">Individual &amp; small-group tutoring</p><p class="timeline-summary">Supported secondary school students with mathematics.</p><div class="timeline-learning"><h5>What I learned</h5><p>Breaking complex problems into clear steps, adapting explanations to different learners and being patient when an idea takes time to click.</p></div></div></li>
+            <li class="timeline-item timeline-highlight" tabindex="-1" id="role-web"><p class="timeline-date">SEP 2023 – AUG 2024</p><div class="timeline-card"><svg class="timeline-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 24C5 5 27 27 27 8M5 24l-2 5 5-2M27 8l2-5-5 2"/><circle cx="5" cy="24" r="2"/><circle cx="27" cy="8" r="2"/><path d="M9 9h4v4H9zM19 19h4v4h-4z"/></svg><span class="timeline-category">WEB DEVELOPMENT</span><h4>Frontend Developer</h4><p class="timeline-organisation">Sveti Sava · Official school website</p><p class="timeline-summary">Developed animations and refined the website’s interface. I continue to maintain it with two friends.</p><div class="timeline-learning"><h5>What I learned</h5><p>Balancing animation with usability, keeping a consistent visual design and turning requests into practical website updates.</p></div></div></li>
             <li class="timeline-item"><p class="timeline-date">SUMMER 2024</p><div class="timeline-card"><span class="timeline-category">WORK</span><h4>Barback</h4><p class="timeline-organisation">Mama Shelter · Belgrade</p><p class="timeline-summary">Supported bar service, drink preparation and restocking.</p><div class="timeline-learning"><h5>What I learned</h5><p>Staying organised during busy service, anticipating what teammates need and adapting quickly to changing responsibilities.</p></div></div></li>
             <li class="timeline-item"><p class="timeline-date">SEP 2024 – PRESENT</p><div class="timeline-card"><span class="timeline-category category-study">EDUCATION</span><h4>BSc Creative Computing</h4><p class="timeline-organisation">USTP · St. Pölten, Austria</p><p class="timeline-summary">Top of my class with a 1.3 Austrian average. Student representative for five consecutive semesters.</p><div class="timeline-learning"><h5>What I’m learning</h5><p>Connecting software engineering, applied AI and interactive systems, while learning to listen, communicate and represent my peers.</p></div></div></li>
             <li class="timeline-item"><p class="timeline-date">SEP – DEC 2025</p><div class="timeline-card"><span class="timeline-category">WORK</span><h4>Service Team Member</h4><p class="timeline-organisation">McDonald’s</p><p class="timeline-summary">Supported customers and daily restaurant operations as part of the service team.</p><div class="timeline-learning"><h5>What I learned</h5><p>Clear communication, dependable teamwork and maintaining a consistent standard of service under time pressure.</p></div></div></li>
-            <li class="timeline-item timeline-highlight"><p class="timeline-date">JUL – SEP 2026</p><div class="timeline-card"><svg class="timeline-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 16h4l3-9 5 18 4-22 4 23 3-10h5"/></svg><span class="timeline-category">RESEARCH INTERNSHIP</span><h4>Data Analysis &amp; Machine Learning</h4><p class="timeline-organisation">ELECOM · USTP, St. Pölten</p><p class="timeline-summary">Analysed elephant vocalisations and improved annotation and processing tools with Python and MATLAB.</p><div class="timeline-learning"><h5>What I learned</h5><p>Investigating unfamiliar datasets, testing software methodically and documenting findings while comparing signal-processing and classification methods.</p></div></div></li>
+            <li class="timeline-item timeline-highlight" tabindex="-1" id="role-elecom"><p class="timeline-date">JUL – SEP 2026</p><div class="timeline-card"><svg class="timeline-emblem" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 16h4l3-9 5 18 4-22 4 23 3-10h5"/></svg><span class="timeline-category">RESEARCH INTERNSHIP</span><h4>Data Analysis &amp; Machine Learning</h4><p class="timeline-organisation">ELECOM · USTP, St. Pölten</p><p class="timeline-summary">Analysed elephant vocalisations and improved annotation and processing tools with Python and MATLAB.</p><div class="timeline-learning"><h5>What I learned</h5><p>Investigating unfamiliar datasets, testing software methodically and documenting findings while comparing signal-processing and classification methods.</p></div></div></li>
             <li class="timeline-item timeline-future"><p class="timeline-date">EXPECTED JUN 2027</p><div class="timeline-card"><span class="timeline-category category-study">UPCOMING MILESTONE</span><h4>Bachelor’s Graduation</h4><p class="timeline-organisation">BSc in Engineering · Creative Computing</p><p class="timeline-summary">Expected completion of my studies at USTP, St. Pölten.</p><div class="timeline-learning"><h5>What comes next</h5><p>Bringing my studies, research experience and practical projects into a software engineering role where I can keep learning and contributing.</p></div></div></li>
           </ol>
         </div>
@@ -304,12 +311,13 @@
     </section>
 
     <section class="section skills-section" id="skills">
-      <div class="section-heading"><p class="eyebrow">TECHNICAL TOOLKIT</p><h2>Tools I work with</h2></div>
+      <div class="section-heading"><p class="eyebrow">TECHNICAL TOOLKIT</p><h2>Tools I work with</h2><p class="section-lead">The languages, tools and methods I use across software projects, research and physical prototypes.</p></div>
       <div class="skill-grid">
-        <div class="skill-box"><h3>Programming</h3><p>Python · Java · Kotlin · C# · C++ · JavaScript · SQL</p></div>
-        <div class="skill-box"><h3>AI & Data</h3><p>NumPy · Pandas · Scikit-learn · TensorFlow / Keras · MATLAB</p></div>
-        <div class="skill-box"><h3>Development</h3><p>React · Node.js · REST APIs · Android · Git</p></div>
-        <div class="skill-box"><h3>Foundations</h3><p>Object-oriented programming · Backend development · Computer vision · Physical computing</p></div>
+        <div class="skill-box"><h3>Programming</h3><p>Python · Java · Kotlin · C# · C++ · JavaScript · SQL</p><p class="skill-context">Object-oriented programming and practical problem-solving across different platforms.</p></div>
+        <div class="skill-box"><h3>Web &amp; Backend</h3><p>HTML · CSS · React · Node.js · Express · REST APIs</p><p class="skill-context">From maintaining the Saint Sava website to building Web Library 451.</p></div>
+        <div class="skill-box"><h3>Mobile Development</h3><p>Android · Jetpack Compose · Android Studio</p><p class="skill-context">Native Kotlin apps with interactive interfaces: BriefBeer and ArcaneAtlas.</p></div>
+        <div class="skill-box"><h3>AI &amp; Data</h3><p>NumPy · Pandas · SciPy · scikit-learn · PyTorch · TensorFlow / Keras · MATLAB</p><p class="skill-context">Feature extraction, classification experiments and biomedical image segmentation.</p></div>
+        <div class="skill-box"><h3>Engineering &amp; Prototyping</h3><p>Git · Figma · ProtoPie · Arduino · Electronics · 3D printing</p><p class="skill-context">Interface design, interactive prototyping and hands-on builds, including an Arduino slot machine.</p></div>
       </div>
     </section>
 
@@ -339,12 +347,20 @@
         <p class="contact-form-note" id="contact-form-note">All fields are required. Your message is processed by <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noreferrer">FormSubmit</a> and emailed to me. You’ll continue there to complete the spam check.</p>
         <button class="button button-orange" type="submit">Send message</button>
       </form>
-      <p class="contact-direct">Prefer your email app? <a href="mailto:misa.karapandzic@gmail.com">Email me directly</a></p>
-      <div class="contact-links"><a href="https://github.com/Rotman11050" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/miloš-karapandžić-1b1u0l5k0a" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
+      <div class="contact-simple">
+        <p class="contact-direct">Prefer your email app? <button class="contact-copy-button" id="copy-contact-email" type="button" data-email="misa.karapandzic@gmail.com">Copy mail</button></p>
+        <p class="contact-copy-status" id="contact-copy-status" role="status" aria-live="polite"></p>
+        <div class="contact-links" aria-label="Social profiles"><a href="https://github.com/Rotman11050" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/miloš-karapandžić-1b1u0l5k0a" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+      </div>
     </section>
   </main>
   <footer><span>© <span id="year"></span> Miloš Karapandžić</span><span>Designed with curiosity. Built with code.</span></footer>
-  <script src="script.js?v=signature-hold-7"></script>
+  <dialog class="cv-preview" id="cv-preview" aria-labelledby="cv-preview-title">
+    <div class="cv-preview-toolbar"><h2 id="cv-preview-title">Miloš Karapandžić · CV</h2><button class="cv-preview-close" type="button" autofocus>Close</button></div>
+    <div class="cv-preview-actions"><button class="cv-preview-zoom" type="button" aria-pressed="false">Zoom in</button><a href="assets/documents/Milos-Karapandzic-CV.pdf" target="_blank" rel="noopener noreferrer">Open PDF in a new tab</a><a href="assets/documents/Milos-Karapandzic-CV.pdf" download>Download PDF</a></div>
+    <div class="cv-preview-document" tabindex="0" role="region" aria-label="CV page preview. Scroll to read the full page; use Open PDF for selectable text."><img data-src="assets/documents/cv-preview-1.webp" width="1310" height="1853" alt="Miloš Karapandžić’s CV, page 1. The original PDF is available using the Open PDF link above."></div>
+  </dialog>
+  <script src="script.js?v=floating-nav-14"></script>
   <script src="monogram.js?v=mk-flight-3"></script>
 </body>
 </html>

@@ -1,5 +1,45 @@
 const toggle = document.querySelector(".menu-toggle");
+const cvPreviewLink = document.querySelector('#preview-cv');
+const cvPreview = document.querySelector('#cv-preview');
+let cvPreviousOverflow = '';
+cvPreviewLink.addEventListener('click', event => {
+  if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || typeof cvPreview.showModal !== 'function') return;
+  event.preventDefault();
+  const documentFrame = cvPreview.querySelector('.cv-preview-document img');
+  if (!documentFrame.hasAttribute('src')) documentFrame.src = documentFrame.dataset.src;
+  cvPreviousOverflow = document.documentElement.style.overflow;
+  cvPreview.showModal();
+  cvPreview.querySelector('.cv-preview-document').scrollTop = 0;
+  document.documentElement.style.overflow = 'hidden';
+});
+cvPreview.querySelector('.cv-preview-close').addEventListener('click', () => cvPreview.close());
+cvPreview.querySelector('.cv-preview-zoom').addEventListener('click', event => {
+  const zoomed = cvPreview.querySelector('.cv-preview-document').classList.toggle('is-zoomed');
+  event.currentTarget.textContent = zoomed ? 'Fit to width' : 'Zoom in';
+  event.currentTarget.setAttribute('aria-pressed', String(zoomed));
+});
+cvPreview.addEventListener('click', event => {
+  const rect = cvPreview.getBoundingClientRect();
+  if (event.target === cvPreview && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) cvPreview.close();
+});
+cvPreview.addEventListener('close', () => {
+  document.documentElement.style.overflow = cvPreviousOverflow;
+  cvPreviewLink.focus({ preventScroll: true });
+});
 const nav = document.querySelector(".nav");
+function closeNavigation() {
+  nav.classList.remove('open');
+  toggle.setAttribute('aria-expanded', 'false');
+}
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && nav.classList.contains('open')) {
+    closeNavigation();
+    toggle.focus();
+  }
+});
+document.addEventListener('click', event => {
+  if (!event.target.closest('.site-header')) closeNavigation();
+});
 toggle?.addEventListener("click", () => {
   const isOpen = nav.classList.toggle("open");
   toggle.setAttribute("aria-expanded", String(isOpen));
@@ -163,8 +203,33 @@ motionPreference.addEventListener('change', measureTimeline);
 const timelineResize = new ResizeObserver(measureTimeline);
 timelineResize.observe(timelineScene);
 timelineResize.observe(document.querySelector('.about-layout'));
+timelineResize.observe(document.querySelector('.experience-overview'));
+function showExperience(hash, behavior = motionPreference.matches ? 'instant' : 'smooth') {
+  const item = Array.from(experienceTrack.querySelectorAll('.timeline-item[id]')).find(item => '#' + item.id === hash);
+  if (!item) return;
+  measureTimeline();
+  const destination = Math.max(0, Math.min(timelineTravel,
+    item.getBoundingClientRect().left - experienceTrack.getBoundingClientRect().left + experienceTrack.scrollLeft));
+  item.focus({ preventScroll: true });
+  if (timelinePinned) {
+    window.scrollTo({ top: timelineStart + timelineHold + destination, behavior });
+  } else {
+    experienceTrack.scrollTo({ left: destination, behavior });
+    window.scrollTo({ top: timelineStart, behavior });
+  }
+}
+document.querySelectorAll('.experience-selected a').forEach(link => {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    const hash = link.getAttribute('href');
+    history.pushState(null, '', hash);
+    showExperience(hash);
+  });
+});
+window.addEventListener('hashchange', () => showExperience(location.hash));
+document.fonts?.ready.then(() => showExperience(location.hash, 'instant'));
 experienceTrack.addEventListener('keydown', event => {
-  if (event.target !== experienceTrack) return;
+  if (event.target !== experienceTrack && !event.target.matches('.timeline-item[tabindex]')) return;
   const firstItem = experienceTrack.querySelector('.timeline-item');
   const gap = parseFloat(getComputedStyle(firstItem.parentElement).columnGap) || 0;
   const step = firstItem.getBoundingClientRect().width + gap;
@@ -182,3 +247,20 @@ experienceTrack.addEventListener('keydown', event => {
 });
 document.fonts?.ready.then(measureTimeline);
 measureTimeline();
+
+const copyEmailButton = document.querySelector('#copy-contact-email');
+const copyEmailStatus = document.querySelector('#contact-copy-status');
+copyEmailButton.addEventListener('click', async () => {
+  const emailAddress = copyEmailButton.dataset.email;
+  try {
+    await navigator.clipboard.writeText(emailAddress);
+    copyEmailStatus.textContent = 'Email address copied.';
+  } catch {
+    copyEmailStatus.textContent = emailAddress;
+    const range = document.createRange();
+    range.selectNodeContents(copyEmailStatus);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }
+});
