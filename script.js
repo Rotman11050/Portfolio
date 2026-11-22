@@ -17,17 +17,31 @@ const portraitStage = portraitSection.querySelector('.stage');
 const signatureFirst = signature.querySelector('.signature-first');
 const signatureLast = signature.querySelector('.signature-last');
 const signatureFlourish = signature.querySelector('.signature-flourish');
+const portraitBubbles = [
+  { element: portraitStage.querySelector('.tag-apex'), start: -90, end: -135, mobileStart: -90, mobileEnd: -118 },
+  { element: portraitStage.querySelector('.tag-bottom'), start: 150, end: 125, mobileStart: 200, mobileEnd: 180 },
+  { element: portraitStage.querySelector('.tag-right'), start: 30, end: -5, mobileStart: 30, mobileEnd: -5 }
+];
+let compactPortrait = window.innerWidth <= 650;
 let framePending = false;
 let fontReady = false;
 let sectionTop = 0;
 let scrollDistance = 1;
+let signatureHoldDistance = 0;
 const clamp = value => Math.min(1, Math.max(0, value));
 function setStyle(element, property, value) {
+  if (property.startsWith('--')) {
+    if (element.style.getPropertyValue(property) !== value) element.style.setProperty(property, value);
+    return;
+  }
   if (element.style[property] !== value) element.style[property] = value;
 }
 function measurePortrait() {
+  compactPortrait = window.innerWidth <= 650;
   sectionTop = portraitSection.getBoundingClientRect().top + window.scrollY;
   scrollDistance = Math.max(1, portraitSection.offsetHeight - portraitStage.offsetHeight);
+  // The added 20svh is a reading pause, rather than slower handwriting.
+  signatureHoldDistance = motionPreference.matches ? 0 : portraitSection.offsetHeight * (20 / 280);
   scheduleUpdate();
 }
 function revealLine(line, progress) {
@@ -37,13 +51,27 @@ function revealLine(line, progress) {
 }
 function updatePortrait() {
   // Reuse cached geometry to keep scrolling lightweight.
-  const scrollProgress = clamp((window.scrollY - sectionTop) / scrollDistance);
+  const travelled = Math.max(0, window.scrollY - sectionTop);
+  const animationDistance = Math.max(1, scrollDistance - signatureHoldDistance);
+  const holdStart = animationDistance * .52;
+  const heldDistance = Math.min(signatureHoldDistance, Math.max(0, travelled - holdStart));
+  const scrollProgress = clamp((travelled - heldDistance) / animationDistance);
   const sceneProgress = motionPreference.matches ? 0 : clamp((scrollProgress - 0.65) / 0.35);
   const sceneValue = sceneProgress.toFixed(4);
   if (portraitSection.style.getPropertyValue('--progress') !== sceneValue) {
     portraitSection.style.setProperty('--progress', sceneValue);
   }
   portraitSection.classList.toggle('is-transitioning', sceneProgress > 0 && sceneProgress < 1);
+  // Clear the signature as it writes, then hold these positions during zoom-out.
+  const orbitProgress = motionPreference.matches ? 1 : clamp((scrollProgress - .02) / .46);
+  const orbitEase = orbitProgress * orbitProgress * (3 - 2 * orbitProgress);
+  portraitBubbles.forEach(bubble => {
+    const start = compactPortrait ? bubble.mobileStart : bubble.start;
+    const end = compactPortrait ? bubble.mobileEnd : bubble.end;
+    const angle = (start + (end - start) * orbitEase) * Math.PI / 180;
+    setStyle(bubble.element, '--bubble-cos', Math.cos(angle).toFixed(6));
+    setStyle(bubble.element, '--bubble-sin', Math.sin(angle).toFixed(6));
+  });
   revealLine(signatureFirst, clamp((scrollProgress - 0.02) / 0.16));
   revealLine(signatureLast, clamp((scrollProgress - 0.18) / 0.22));
   setStyle(signatureFlourish, 'strokeDashoffset', (1 - clamp((scrollProgress - 0.40) / 0.08)).toFixed(4));
