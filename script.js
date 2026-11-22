@@ -93,3 +93,64 @@ aboutTabs.forEach((tab, index) => {
     aboutTabs[nextIndex].focus();
   });
 });
+
+// The page scroll drives horizontal movement while the timeline remains sticky.
+const experienceTrack = document.querySelector('#experience-track');
+const timelineSection = document.querySelector('.experience-timeline');
+const timelineScene = timelineSection.querySelector('.timeline-scene');
+const timelineHint = document.querySelector('#timeline-hint');
+let timelineStart = 0;
+let timelineTravel = 0;
+let timelinePinned = false;
+let timelineFrame = false;
+const timelineHold = 80;
+function updateTimeline() {
+  if (timelinePinned) {
+    const distance = Math.min(timelineTravel, Math.max(0, window.scrollY - timelineStart - timelineHold));
+    experienceTrack.scrollLeft = distance;
+  }
+  timelineFrame = false;
+}
+function scheduleTimeline() {
+  if (!timelineFrame) {
+    timelineFrame = true;
+    requestAnimationFrame(updateTimeline);
+  }
+}
+function measureTimeline() {
+  timelineTravel = Math.max(0, experienceTrack.scrollWidth - experienceTrack.clientWidth);
+  const sceneHeight = timelineScene.offsetHeight;
+  timelinePinned = !motionPreference.matches && timelineTravel > 0 && sceneHeight <= window.innerHeight;
+  timelineSection.classList.toggle('is-pinned', timelinePinned);
+  timelineSection.style.setProperty('--timeline-height', (sceneHeight + timelineTravel + timelineHold * 2) + 'px');
+  timelineStart = timelineSection.getBoundingClientRect().top + window.scrollY;
+  timelineHint.textContent = timelinePinned
+    ? 'Scroll down to follow my journey. When focused, use the left and right arrow keys.'
+    : 'Scroll or swipe across my journey. When focused, use the left and right arrow keys.';
+  scheduleTimeline();
+}
+window.addEventListener('scroll', scheduleTimeline, { passive: true });
+window.addEventListener('resize', measureTimeline, { passive: true });
+motionPreference.addEventListener('change', measureTimeline);
+const timelineResize = new ResizeObserver(measureTimeline);
+timelineResize.observe(timelineScene);
+timelineResize.observe(document.querySelector('.about-layout'));
+experienceTrack.addEventListener('keydown', event => {
+  if (event.target !== experienceTrack) return;
+  const firstItem = experienceTrack.querySelector('.timeline-item');
+  const gap = parseFloat(getComputedStyle(firstItem.parentElement).columnGap) || 0;
+  const step = firstItem.getBoundingClientRect().width + gap;
+  let destination;
+  if (event.key === 'ArrowLeft') destination = experienceTrack.scrollLeft - step;
+  else if (event.key === 'ArrowRight') destination = experienceTrack.scrollLeft + step;
+  else if (event.key === 'Home') destination = 0;
+  else if (event.key === 'End') destination = timelineTravel;
+  else return;
+  event.preventDefault();
+  destination = Math.max(0, Math.min(timelineTravel, destination));
+  const behavior = motionPreference.matches ? 'instant' : 'smooth';
+  if (timelinePinned) window.scrollTo({ top: timelineStart + timelineHold + destination, behavior });
+  else experienceTrack.scrollTo({ left: destination, behavior });
+});
+document.fonts?.ready.then(measureTimeline);
+measureTimeline();

@@ -1,0 +1,11 @@
+.monogram-anchor{height:clamp(230px,22vw,360px);margin-top:24px;position:relative}
+.monogram-flight{width:100%;height:100%;pointer-events:none}
+.monogram-flight svg{display:block;width:100%;height:100%;overflow:visible}
+.monogram-viewport{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden;contain:layout style paint}
+.monogram-viewport .monogram-flight{position:absolute;left:0;top:0;width:620px;height:360px;visibility:hidden;transform-origin:50% 50%;will-change:transform}
+/* Keep the mark above section backgrounds and below the reading surfaces. */
+.about-layout,.experience-timeline,.projects-section .section-heading,.project-grid,.skills-section .section-heading,.skill-grid,.contact-section>*,footer{position:relative;z-index:2}
+.contact-form{box-shadow:0 18px 60px #113f4a0c}
+@media(max-width:900px){.monogram-anchor{height:270px;margin-top:16px}}
+@media(max-width:600px){.monogram-anchor{height:230px;margin-top:12px}}
+@media(prefers-reduced-motion:reduce){.monogram-flight{transform:none!important}.monogram-viewport{display:none}}

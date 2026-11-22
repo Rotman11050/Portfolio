@@ -1,4 +1,14 @@
 /* Supplement the original project-card design with the recovered details and links. */
+.projects-section{background:var(--sea);color:var(--white);--line:rgba(213,224,220,.22)}
+.projects-section .section-lead{color:#d5e0dc}
+.projects-section .section-heading .eyebrow{color:#ffb391}
+.projects-section .project-card{background:#174b56;border-color:var(--line)}
+.projects-section .project-type{color:#ffb391}
+.projects-section .project-card p:not(.project-type):not(.project-note){color:#d5e0dc}
+.projects-section .chips span{color:#d5e0dc;border-color:#d5e0dc55}
+.projects-section .project-note{color:#d5e0dc}
+.projects-section .project-details summary,.projects-section .project-links a{color:var(--white)}
+.projects-section .project-links a:hover{color:#ffb391}
 .project-details{border-top:1px solid var(--line);padding-top:16px;margin-top:20px}
 .project-details summary{font-size:.875rem;font-weight:700;color:var(--sea);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .project-details summary::-webkit-details-marker{display:none}
