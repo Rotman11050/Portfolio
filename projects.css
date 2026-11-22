@@ -28,3 +28,80 @@
 .visual-portfolio strong{font-size:3.5rem;letter-spacing:-.08em}.visual-portfolio strong span{color:var(--tomato)}
 .visual-portfolio small{font:.6rem/1.8 'DM Mono',monospace;letter-spacing:.1em}
 @media(max-width:900px){.phone-outline{min-height:155px;margin:20px auto}.project-visual.visual-mobile{min-height:210px}.school-mark{max-width:280px}}
+
+/* Illustrations play only while hovered; leaving restores the still artwork. */
+[data-project-animation]{padding:28px 12px;min-width:0}
+.project-art{display:block;width:100%;max-width:350px;height:auto;flex:none;overflow:hidden}
+.project-art text{font:10px 'DM Mono',monospace;text-anchor:middle;letter-spacing:1px}
+.project-art text:not([fill]){fill:currentColor}
+.project-art .art-title{font:700 25px Manrope,sans-serif;letter-spacing:-1px}
+.project-art .reel text{font:800 50px Manrope,sans-serif;fill:#ee5c35;letter-spacing:0}
+.project-art .book-number{font:800 32px Manrope,sans-serif;fill:#113f4a;letter-spacing:-2px}
+.project-art .atlas-monogram{font:700 23px Manrope,sans-serif;fill:#d5b774;letter-spacing:-1px}
+.visual-school[data-project-animation]{padding:28px 12px}
+.book-body,.book-page,.book-number,.book-fire,.flame,.beer-liquid,.beer-foam,.beer-overflow,.ability,.seg-mask{transform-box:fill-box;transform-origin:center}
+.book-page{transform-origin:left center}
+.book-fire,.flame,.beer-liquid{transform-origin:center bottom}
+.beer-overflow{transform-origin:center top}
+.book-fire,.slot-win{opacity:0}
+.ability-orb{transform:translate(-85px,-60px)}
+.ability-bolt{transform:translate(90px,-55px)}
+.ability-ring{transform:translate(87px,49px)}
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+[data-project-animation]:hover .contour-trace{animation:trace-call 6s ease both}
+[data-project-animation]:hover .spec-scan{animation:scan-call 6s ease both}
+[data-project-animation]:hover .spec-background{animation:quiet-background 6s ease both}
+[data-project-animation]:hover .school-heading{animation:school-heading 6s ease both}
+[data-project-animation]:hover .school-content{animation:school-content 6s ease both}
+[data-project-animation]:hover .school-update{animation:school-update 6s ease both}
+[data-project-animation]:hover .unet-scan{animation:scan-ultrasound 6s ease both}
+[data-project-animation]:hover .seg-mask{animation:segment-reveal 6s ease both}
+[data-project-animation]:hover .reel{animation:spin-reel 2s linear both}
+[data-project-animation]:hover .reel-two{animation-duration:2.6s}
+[data-project-animation]:hover .reel-three{animation-duration:3.2s}
+[data-project-animation]:hover .slot-lights{animation:winning-lights 6s ease both}
+[data-project-animation]:hover .slot-ready{animation:ready-message 6s ease both}
+[data-project-animation]:hover .slot-win{animation:winning-message 6s ease both}
+[data-project-animation]:hover .book-body{animation:open-book 6s ease both}
+[data-project-animation]:hover .book-page{animation:turn-page 6s ease both}
+[data-project-animation]:hover .book-fire{animation:ignite-book 6s ease both}
+[data-project-animation]:hover .book-number{animation:rise-from-flames 6s ease both}
+[data-project-animation]:hover .flame-one{animation:flame-left 6s ease both}
+[data-project-animation]:hover .flame-two{animation:flame-right 6s ease both}
+[data-project-animation]:hover .beer-liquid{animation:fill-beer 6s ease both}
+[data-project-animation]:hover .beer-foam{animation:foam-rise 6s ease both}
+[data-project-animation]:hover .beer-bubbles{animation:beer-bubbles 6s linear both}
+[data-project-animation]:hover .beer-overflow{animation:overflow-beer 6s ease both}
+[data-project-animation]:hover .ability-orb{animation:cast-orb 6s ease both}
+[data-project-animation]:hover .ability-bolt{animation:cast-bolt 6s ease both}
+[data-project-animation]:hover .ability-ring{animation:cast-ring 6s ease both}
+[data-project-animation]:hover .atlas-phone{animation:phone-charge 6s ease both}
+}
+@keyframes trace-call{0%,10%{stroke-dasharray:1;stroke-dashoffset:1}65%,100%{stroke-dasharray:1;stroke-dashoffset:0}}
+@keyframes scan-call{0%,10%{opacity:0;transform:translateX(0)}15%{opacity:.65}65%{opacity:.65;transform:translateX(240px)}70%,100%{opacity:0;transform:translateX(240px)}}
+@keyframes quiet-background{0%,35%{opacity:.35}75%,100%{opacity:.08}}
+@keyframes school-heading{0%,8%{opacity:0;transform:translateY(12px)}30%,100%{opacity:1;transform:translateY(0)}}
+@keyframes school-content{0%,22%{opacity:0;transform:translateY(16px)}50%,100%{opacity:.18;transform:translateY(0)}}
+@keyframes school-update{0%,48%{opacity:0;transform:translateY(6px)}62%,88%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(0)}}
+@keyframes scan-ultrasound{0%,10%{opacity:0;transform:translateY(0)}15%{opacity:.7}55%{opacity:.7;transform:translateY(130px)}60%,100%{opacity:0;transform:translateY(130px)}}
+@keyframes segment-reveal{0%,35%{opacity:0;transform:scale(.9)}70%,100%{opacity:1;transform:scale(1)}}
+@keyframes spin-reel{0%{transform:translateY(0)}10%{transform:translateY(70px)}11%{transform:translateY(-70px)}30%{transform:translateY(70px)}31%{transform:translateY(-70px)}50%{transform:translateY(70px)}51%{transform:translateY(-70px)}70%{transform:translateY(70px)}71%{transform:translateY(-70px)}86%{transform:translateY(25px)}94%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+@keyframes winning-lights{0%,53%{opacity:.25}59%{opacity:1}65%{opacity:.45}72%,100%{opacity:1}}
+@keyframes ready-message{0%,52%{opacity:1}54%,100%{opacity:0}}
+@keyframes winning-message{0%,53%{opacity:0}60%,100%{opacity:1}}
+@keyframes open-book{0%{transform:scaleX(.15);opacity:.2}18%,76%{transform:scaleX(1);opacity:1}88%{opacity:.15}100%{transform:scaleX(1);opacity:1}}
+@keyframes turn-page{0%,20%{transform:scaleX(1);opacity:1}37%{transform:scaleX(-1);opacity:.7}44%,100%{transform:scaleX(-1);opacity:0}}
+@keyframes ignite-book{0%,46%{opacity:0;transform:scaleY(.05)}58%{opacity:1;transform:scaleY(.65)}72%{opacity:1;transform:scaleY(1.15)}84%{opacity:1;transform:scaleY(1.4)}97%,100%{opacity:0;transform:scaleY(.1)}}
+@keyframes rise-from-flames{0%,46%{opacity:0;transform:translateY(12px) scale(.85)}58%{opacity:1;transform:translateY(-12px) scale(1)}82%,100%{opacity:1;transform:translateY(-120px) scale(1.35)}}
+@keyframes flame-left{0%,50%{transform:skewX(0)}60%{transform:skewX(-8deg) scaleY(1.05)}69%{transform:skewX(6deg) scaleY(.9)}78%{transform:skewX(-6deg) scaleY(1.1)}90%,100%{transform:skewX(0)}}
+@keyframes flame-right{0%,50%{transform:skewX(0)}60%{transform:skewX(6deg) scaleY(.95)}69%{transform:skewX(-8deg) scaleY(1.1)}78%{transform:skewX(5deg)}90%,100%{transform:skewX(0)}}
+@keyframes fill-beer{0%{transform:scaleY(.04)}48%,100%{transform:scaleY(1)}}
+@keyframes foam-rise{0%,30%{opacity:0;transform:translateY(80px) scale(.8)}48%{opacity:1;transform:translateY(0) scale(1)}65%{transform:translateY(-3px) scale(1.04)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes beer-bubbles{0%{opacity:0;transform:translateY(35px)}35%{opacity:.8}88%{opacity:.8;transform:translateY(-40px)}100%{opacity:.65;transform:translateY(0)}}
+@keyframes overflow-beer{0%,50%{opacity:0;transform:scaleY(0)}58%{opacity:1;transform:scaleY(.35)}78%,100%{opacity:1;transform:scaleY(1)}}
+@keyframes cast-orb{0%,15%{opacity:0;transform:translate(0,0) scale(.2)}25%{opacity:1;transform:translate(0,0) scale(.7)}65%,82%{opacity:1;transform:translate(-85px,-60px) scale(1)}100%{opacity:0;transform:translate(-100px,-70px) scale(.8)}}
+@keyframes cast-bolt{0%,26%{opacity:0;transform:translate(0,0) scale(.2)}36%{opacity:1;transform:translate(0,0) scale(.8)}70%,86%{opacity:1;transform:translate(90px,-55px) scale(1)}100%{opacity:0;transform:translate(105px,-65px) scale(.8)}}
+@keyframes cast-ring{0%,38%{opacity:0;transform:translate(0,0) scale(.2)}48%{opacity:1;transform:translate(0,0) scale(.5)}76%,90%{opacity:1;transform:translate(87px,49px) scale(1.1)}100%{opacity:0;transform:translate(100px,58px) scale(1.3)}}
+@keyframes phone-charge{0%,12%{stroke:#c6d7df}30%,55%{stroke:#8de2ce}100%{stroke:#c6d7df}}
+@media(max-width:900px){[data-project-animation]{min-height:250px;padding:12px 10px}.project-art{max-width:300px}}
+@media(prefers-reduced-motion:reduce){[data-project-animation] *{animation:none!important}}

@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=8f6649bd52f0">
-  <link rel="stylesheet" href="projects.css?v=9b20eb3f1f3d">
+  <link rel="stylesheet" href="projects.css?v=project-hover-4">
   <link rel="stylesheet" href="portrait.css?v=261a7b7af766">
 </head>
 <body>
@@ -56,7 +56,18 @@
             <details class="project-details"><summary aria-label="Details about ELECOM — Elephant Vocalisation Analysis">Project details</summary><p>The workflow combined manual annotation, contour-guided audio filtering, acoustic feature extraction and machine-learning experiments.</p><p>Improved a MATLAB annotation tool for tracing calls in spectrograms. Built Python tools for preparing recordings, matching annotations to separated audio and comparing processing methods.</p><p>Explored call classification using acoustic features, logistic regression and an EfficientNet-based neural network.</p></details>
 
           </div>
-          <div class="project-visual visual-audio" aria-hidden="true"><div class="waveform"></div><small>ACOUSTIC SIGNAL ANALYSIS</small></div>
+          <div class="project-visual visual-audio" data-project-animation>
+            <svg class="project-art" viewBox="0 0 320 280" aria-hidden="true" focusable="false">
+              <rect x="28" y="43" width="264" height="164" rx="8" fill="#0b2b34"/>
+              <path d="M28 84H292M28 125H292M28 166H292M94 43V207M160 43V207M226 43V207" fill="none" stroke="#d5e0dc" opacity=".1"/>
+              <g class="spec-background" fill="none" stroke="#76a99d" stroke-width="3" opacity=".35"><path d="M35 75L74 98 109 67 148 102 191 69 232 94 284 60M35 180L84 152 122 186 175 162 221 192 284 164"/></g>
+              <g fill="none" stroke="#f2c36a" stroke-width="5" opacity=".45"><path d="M40 165Q90 120 142 139T280 104M40 140Q90 95 142 114T280 79"/></g>
+              <path class="contour-trace" pathLength="1" d="M40 165Q90 120 142 139T280 104" fill="none" stroke="#ff7144" stroke-width="3" stroke-linecap="round"/>
+              <path class="spec-scan" d="M40 48V202" stroke="#f2eee5" opacity="0"/>
+              <text x="160" y="242">TRACE THE CALL</text>
+            </svg>
+
+          </div>
         </article>
 
         <article class="project-card project-wide" id="project-saint-sava">
@@ -69,7 +80,17 @@
             <details class="project-details"><summary aria-label="Details about Saint Sava Grammar School Website">Project details</summary><p>Worked on the layout and interactive design elements, focusing on animations and the overall visual feel. Together with two friends, I continue to maintain the website and add content and features at the school’s request.</p></details>
             <div class="project-links"><a href="https://gimnazijasvetisava.edu.rs/" target="_blank" rel="noopener noreferrer">Visit website</a></div>
           </div>
-          <div class="project-visual visual-school" aria-hidden="true"><div class="school-mark"><span>Saint Sava</span><small>LEARN. CREATE. CONNECT.</small><i></i><i></i><i></i></div></div>
+          <div class="project-visual visual-school" data-project-animation>
+            <svg class="project-art" viewBox="0 0 320 280" aria-hidden="true" focusable="false">
+              <rect x="30" y="35" width="260" height="188" rx="10" fill="#f2eee5" stroke="#113f4a" stroke-width="2"/>
+              <path d="M30 65H290" stroke="#113f4a" opacity=".25"/><g fill="#113f4a" opacity=".4"><circle cx="45" cy="50" r="3"/><circle cx="56" cy="50" r="3"/><circle cx="67" cy="50" r="3"/></g>
+              <g class="school-heading"><text class="art-title" x="160" y="103">Saint Sava</text><path d="M108 117H212" stroke="#ee5c35" stroke-width="3"/></g>
+              <g class="school-content" fill="#113f4a" opacity=".18"><rect x="51" y="140" width="94" height="61" rx="4"/><rect x="162" y="141" width="104" height="7" rx="3"/><rect x="162" y="158" width="89" height="5" rx="2"/><rect x="162" y="172" width="98" height="5" rx="2"/><rect x="162" y="186" width="70" height="5" rx="2"/></g>
+              <g class="school-update"><rect x="190" y="207" width="89" height="26" rx="13" fill="#113f4a"/><text x="234" y="224" fill="#f2eee5">UPDATED</text></g>
+              <text x="160" y="258">DESIGN. BUILD. MAINTAIN.</text>
+            </svg>
+
+          </div>
         </article>
 
         <article class="project-card project-featured" id="project-unet">
@@ -82,7 +103,18 @@
             <details class="project-details"><summary aria-label="Details about U-Net: Biomedical Image Segmentation">Project details</summary><p>Explored the original 2015 architecture, preprocessed ultrasound images and tumour masks, resized inputs to 128 × 128, and evaluated segmentation using intersection over union (IoU). The project report contains the methodology.</p></details>
             <div class="project-links"><a href="assets/projects/unet-report.pdf" target="_blank" rel="noopener noreferrer">Read report (PDF)</a></div>
           </div>
-          <div class="project-visual visual-unet" aria-hidden="true"><span>INPUT</span><b>U-NET</b><span>SEGMENTATION</span></div>
+          <div class="project-visual visual-unet" data-project-animation>
+            <svg class="project-art" viewBox="0 0 320 280" aria-hidden="true" focusable="false">
+              <defs><pattern id="ultrasound-grain" width="13" height="11" patternUnits="userSpaceOnUse"><path d="M1 2H5M8 7H12M3 10H6" stroke="#bbc5c4" opacity=".4"/></pattern></defs>
+              <rect x="30" y="47" width="260" height="150" rx="9" fill="#19343c"/><path d="M160 53L48 184Q160 211 272 184Z" fill="url(#ultrasound-grain)"/>
+              <path d="M114 127C121 103 164 98 188 115S205 153 177 162 106 155 114 127" fill="#091e25"/>
+              <path class="seg-mask" d="M114 127C121 103 164 98 188 115S205 153 177 162 106 155 114 127" fill="#ee5c35" fill-opacity=".6" stroke="#ff9564" stroke-width="2"/>
+              <path class="unet-scan" d="M37 57H283" stroke="#f2eee5" opacity="0"/>
+              <g fill="none" stroke="#113f4a" stroke-width="1.5"><path d="M70 222H126M194 222H250"/><rect x="127" y="207" width="66" height="30" rx="6"/></g>
+              <text x="47" y="226">INPUT</text><text x="160" y="226">U-NET</text><text x="274" y="226">MASK</text>
+            </svg>
+
+          </div>
         </article>
 
         <article class="project-card" id="project-slot-machine">
@@ -95,7 +127,18 @@
             <details class="project-details"><summary aria-label="Details about Arduino Slot Machine">Project details</summary><p>Built with three classmates, combining hardware assembly, microcontroller programming and iterative testing. The Arduino handles coin detection, reel logic, lighting effects and win conditions. The prototype uses custom coins rather than money.</p><video controls playsinline preload="none" poster="assets/projects/slot-machine.jpeg" aria-label="Arduino slot machine demonstration"><source src="assets/projects/slot-machine-demo.mp4" type="video/mp4">Your browser cannot play this video. <a href="assets/projects/slot-machine-demo.mp4">Download the demonstration</a>.</video></details>
             <div class="project-links"><a href="https://github.com/einfrog/tui_arduino_slot_machine" target="_blank" rel="noopener noreferrer">Source code</a></div>
           </div>
-          <div class="project-visual visual-slot" aria-hidden="true"><div class="leds"></div><div class="screen">READY TO PLAY</div></div>
+          <div class="project-visual visual-slot" data-project-animation>
+            <svg class="project-art" viewBox="0 0 320 280" aria-hidden="true" focusable="false">
+              <defs><clipPath id="slot-reel-window"><rect x="62" y="81" width="196" height="80" rx="6"/></clipPath></defs>
+              <rect x="42" y="43" width="236" height="179" rx="16" fill="#0b2025" stroke="#d8d0bf" stroke-width="3"/>
+              <g class="slot-lights" fill="#f5c66b"><circle cx="60" cy="60" r="3"/><circle cx="100" cy="60" r="3"/><circle cx="140" cy="60" r="3"/><circle cx="180" cy="60" r="3"/><circle cx="220" cy="60" r="3"/><circle cx="260" cy="60" r="3"/></g>
+              <g fill="#17343a" stroke="#d8d0bf"><rect x="62" y="81" width="58" height="80" rx="6"/><rect x="131" y="81" width="58" height="80" rx="6"/><rect x="200" y="81" width="58" height="80" rx="6"/></g>
+              <g clip-path="url(#slot-reel-window)"><g class="reel reel-one"><text x="91" y="59">3</text><text x="91" y="139">7</text><text x="91" y="219">5</text></g><g class="reel reel-two"><text x="160" y="59">5</text><text x="160" y="139">7</text><text x="160" y="219">3</text></g><g class="reel reel-three"><text x="229" y="59">3</text><text x="229" y="139">7</text><text x="229" y="219">5</text></g></g>
+              <path d="M278 103H294V76" fill="none" stroke="#d8d0bf" stroke-width="5"/><circle cx="294" cy="72" r="9" fill="#ee5c35"/>
+              <text class="slot-ready" x="160" y="194" fill="#8de2ce">READY TO PLAY</text><text class="slot-win" x="160" y="194" fill="#f5c66b">WINNER!</text><text x="160" y="252">BUILT TO PLAY</text>
+            </svg>
+
+          </div>
         </article>
 
         <article class="project-card" id="project-library-451">
@@ -108,7 +151,18 @@
             <details class="project-details"><summary aria-label="Details about Web Library – 451">Project details</summary><p>Inspired by Fahrenheit 451 and the idea of making knowledge accessible. The application brings classic literature into a browsable online library, with a React interface and a Node.js / Express stack.</p></details>
             <div class="project-links"><a href="https://git.nwt.fhstp.ac.at/ccl/ss2025_ccl2_cc241023" target="_blank" rel="noopener noreferrer">Source code</a></div>
           </div>
-          <div class="project-visual visual-library" aria-hidden="true"><span>451</span><small>READ. DISCOVER. ACCESS.</small></div>
+          <div class="project-visual visual-library" data-project-animation>
+            <svg class="project-art" viewBox="0 0 320 280" aria-hidden="true" focusable="false">
+              <g class="book-body"><path d="M42 86Q102 64 160 88Q218 64 278 86V199Q218 178 160 202Q102 178 42 199Z" fill="#113f4a"/>
+              <path d="M49 80Q104 61 160 86V194Q104 170 49 190ZM271 80Q216 61 160 86V194Q216 170 271 190Z" fill="#f8f1de" stroke="#113f4a" stroke-width="1.5"/>
+              <path d="M66 104Q107 94 142 108M66 120Q107 110 142 124M66 136Q107 126 142 140M178 108Q215 94 254 104M178 124Q215 110 254 120M178 140Q215 126 254 136" fill="none" stroke="#113f4a" opacity=".3"/>
+              <path class="book-page" d="M160 86Q216 61 271 80V190Q216 170 160 194Z" fill="#e8d9c0" stroke="#113f4a"/></g>
+              <g class="book-fire" fill="#ee5c35"><path class="flame flame-one" d="M65 206C30 173 76 148 69 112C115 149 79 165 107 188C117 154 139 150 130 107C183 150 125 177 150 211Z"/><path class="flame flame-two" d="M133 211C104 175 161 153 151 102C204 147 168 169 186 189C203 158 229 143 219 103C275 158 238 183 259 210Z"/><path d="M91 210C76 187 109 173 105 153C140 177 121 191 144 211ZM175 211C154 184 195 170 194 145C220 172 203 193 230 211Z" fill="#f5c66b"/></g>
+              <text class="book-number" x="160" y="176">451</text>
+              <text x="160" y="250">FAHRENHEIT 451</text>
+            </svg>
+
+          </div>
         </article>
 
         <article class="project-card" id="project-briefbeer">
@@ -121,7 +175,18 @@
             <details class="project-details"><summary aria-label="Details about BriefBeer">Project details</summary><p>Developed with a friend after discussing how difficult it was to remember beers tried at local breweries and pubs. Users could connect with friends, record and review beers, and submit new beers to the shared database for review before publication.</p><p>Achievements rewarded users with new profile pictures, adding a game element to discovering and recording beers.</p></details>
             <div class="project-links"><a href="https://ccl3-ws2025-0bdf3b.pages.nwt.fhstp.ac.at/" target="_blank" rel="noopener noreferrer">Project documentation</a></div>
           </div>
-          <div class="project-visual visual-mobile visual-beer" aria-hidden="true"><div class="phone-outline"><span class="phone-speaker"></span><strong>BriefBeer</strong><span class="phone-divider"></span><small>YOUR BEER JOURNAL</small></div></div>
+          <div class="project-visual visual-beer" data-project-animation>
+            <svg class="project-art" viewBox="0 0 320 280" aria-hidden="true" focusable="false">
+              <defs><clipPath id="beer-glass-clip"><path d="M94 87H226L214 215H106Z"/></clipPath></defs>
+              <path d="M223 105H239Q261 105 261 130V153Q261 178 231 178H221" fill="none" stroke="#f1d4a3" stroke-width="9"/>
+              <g clip-path="url(#beer-glass-clip)"><path class="beer-liquid" d="M91 87H229V218H91Z" fill="#e9a329"/><g class="beer-bubbles" fill="#ffe6a3"><circle cx="123" cy="178" r="4"/><circle cx="150" cy="139" r="3"/><circle cx="183" cy="184" r="5"/><circle cx="204" cy="121" r="3"/><circle cx="164" cy="206" r="3"/></g></g>
+              <path d="M94 87H226L214 215H106Z" fill="none" stroke="#f1d4a3" stroke-width="3"/><path d="M121 108L127 199M199 108L193 199" stroke="#fff5d8" stroke-width="3" opacity=".35"/>
+              <g class="beer-foam" fill="#fff1d5"><rect x="90" y="73" width="140" height="27" rx="13"/><circle cx="111" cy="75" r="14"/><circle cx="135" cy="68" r="19"/><circle cx="163" cy="72" r="17"/><circle cx="191" cy="69" r="19"/><circle cx="215" cy="77" r="14"/></g>
+              <path class="beer-overflow" d="M222 88Q236 93 231 119V146Q231 157 224 157Q217 157 219 146V121Q210 109 218 91Z" fill="#fff1d5"/>
+              <text class="art-title" x="160" y="250">BriefBeer</text>
+            </svg>
+
+          </div>
         </article>
 
         <article class="project-card" id="project-arcane-atlas">
@@ -134,7 +199,18 @@
             <details class="project-details"><summary aria-label="Details about ArcaneAtlas">Project details</summary><p>Created around the needs of a friend who was learning the game. Users could connect their League of Legends account and, when a match reached the loading screen, see other players’ account data, their champions’ abilities and each player’s mastery on their chosen champion.</p></details>
 
           </div>
-          <div class="project-visual visual-mobile visual-atlas" aria-hidden="true"><div class="phone-outline"><span class="phone-speaker"></span><strong>AA</strong><span class="phone-divider"></span><small>CHAMPION COMPANION</small></div></div>
+          <div class="project-visual visual-atlas" data-project-animation>
+            <svg class="project-art" viewBox="0 0 320 280" aria-hidden="true" focusable="false">
+              <rect class="atlas-phone" x="102" y="42" width="116" height="194" rx="19" fill="#0a202b" stroke="#c6d7df" stroke-width="2"/><path d="M143 55H177" stroke="#c6d7df" stroke-width="3" stroke-linecap="round"/>
+              <path d="M160 89L189 127 160 167 131 127Z" fill="#173d50" stroke="#d5b774"/><text class="atlas-monogram" x="160" y="137">AA</text>
+              <g fill="#c6d7df" opacity=".3"><rect x="122" y="185" width="76" height="4" rx="2"/><rect x="137" y="198" width="46" height="4" rx="2"/></g>
+              <g class="ability ability-orb"><circle cx="160" cy="143" r="19" fill="#62cbd1" fill-opacity=".22" stroke="#8de2ce"/><circle cx="160" cy="143" r="8" fill="#a7f1e0"/><path d="M138 143H182M160 121V165" stroke="#a7f1e0"/></g>
+              <g class="ability ability-bolt"><path d="M161 119L144 145H159L151 168 179 135H163L172 119Z" fill="#f5c66b" stroke="#ffecc4"/></g>
+              <g class="ability ability-ring" fill="none" stroke="#c6a4fa"><circle cx="160" cy="143" r="20" stroke-width="3"/><path d="M160 117V126M160 160V169M134 143H143M177 143H186" stroke-width="2"/><circle cx="160" cy="143" r="12"/></g>
+              <text x="160" y="263">KNOW YOUR MATCH</text>
+            </svg>
+
+          </div>
         </article>
       </div>
     </section>
@@ -195,6 +271,6 @@
     </section>
   </main>
   <footer><span>© <span id="year"></span> Miloš Karapandžić</span><span>Designed with curiosity. Built with code.</span></footer>
-  <script src="script.js?v=712a5b2ab982"></script>
+  <script src="script.js?v=project-hover-2"></script>
 </body>
 </html>
