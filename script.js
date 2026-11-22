@@ -1,6 +1,12 @@
 const toggle = document.querySelector(".menu-toggle");
 const contactReturnUrl = new URL(window.location.href);
 if (contactReturnUrl.searchParams.get('message') === 'sent') {
+  const submittedForm = document.querySelector('.contact-form');
+  submittedForm.style.minHeight = submittedForm.getBoundingClientRect().height + 'px';
+  submittedForm.classList.add('is-sent');
+  submittedForm.setAttribute('aria-label', 'Contact confirmation');
+  submittedForm.removeAttribute('aria-describedby');
+  document.querySelector('#contact-form-fields').hidden = true;
   document.querySelector('#contact-thank-you').hidden = false;
   contactReturnUrl.searchParams.delete('message');
   history.replaceState(history.state, '', contactReturnUrl.pathname + contactReturnUrl.search + contactReturnUrl.hash);
