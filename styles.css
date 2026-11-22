@@ -74,6 +74,7 @@ h2{font-size:clamp(2.3rem,4vw,3.7rem);line-height:1.08;letter-spacing:-.05em;mar
 @media(min-width:601px) and (max-width:900px){.skill-grid>.skill-box:last-child{grid-column:1/-1}}
 .contact-section{background:#E1DCCE;padding:95px 6.5%;text-align:center}
 .contact-section h2{max-width:800px;margin:15px auto}
+.contact-thank-you{max-width:650px;margin:24px auto;padding:18px 22px;border:1px solid #113f4a40;border-left:4px solid var(--tomato);border-radius:10px;background:var(--white);color:var(--sea);font-size:1rem;font-weight:700;text-align:left}
 .contact-section>p:not(.eyebrow){max-width:650px;margin:20px auto 28px;color:#536367}
 .contact-form{max-width:650px;margin:32px auto 0;text-align:left;padding:clamp(20px,4vw,32px);background:var(--white);border:1px solid var(--line);border-radius:15px}
 .contact-form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}

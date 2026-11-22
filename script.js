@@ -1,4 +1,10 @@
 const toggle = document.querySelector(".menu-toggle");
+const contactReturnUrl = new URL(window.location.href);
+if (contactReturnUrl.searchParams.get('message') === 'sent') {
+  document.querySelector('#contact-thank-you').hidden = false;
+  contactReturnUrl.searchParams.delete('message');
+  history.replaceState(history.state, '', contactReturnUrl.pathname + contactReturnUrl.search + contactReturnUrl.hash);
+}
 const cvPreviewLink = document.querySelector('#preview-cv');
 const cvPreview = document.querySelector('#cv-preview');
 let cvPreviousOverflow = '';
