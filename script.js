@@ -68,3 +68,28 @@ const signatureFont = document.fonts ? document.fonts.load('126px Allura', 'Milo
 signatureFont.catch(() => {}).then(() => { fontReady = true; scheduleUpdate(); });
 measurePortrait();
 updatePortrait();
+
+// Accessible focus tabs: mouse/touch selection and standard arrow-key navigation.
+const aboutTabs = [...document.querySelectorAll('.about-tab')];
+function selectAboutTab(selectedTab) {
+  aboutTabs.forEach(tab => {
+    const selected = tab === selectedTab;
+    tab.setAttribute('aria-selected', String(selected));
+    tab.tabIndex = selected ? 0 : -1;
+    document.getElementById(tab.getAttribute('aria-controls')).hidden = !selected;
+  });
+}
+aboutTabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => selectAboutTab(tab));
+  tab.addEventListener('keydown', event => {
+    let nextIndex;
+    if (event.key === 'ArrowRight') nextIndex = (index + 1) % aboutTabs.length;
+    else if (event.key === 'ArrowLeft') nextIndex = (index - 1 + aboutTabs.length) % aboutTabs.length;
+    else if (event.key === 'Home') nextIndex = 0;
+    else if (event.key === 'End') nextIndex = aboutTabs.length - 1;
+    else return;
+    event.preventDefault();
+    selectAboutTab(aboutTabs[nextIndex]);
+    aboutTabs[nextIndex].focus();
+  });
+});
