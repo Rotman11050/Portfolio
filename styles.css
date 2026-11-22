@@ -62,6 +62,8 @@ h2{font-size:clamp(2.3rem,4vw,3.7rem);line-height:1.08;letter-spacing:-.05em;mar
 .about-section{background:var(--sea);color:var(--white);display:grid;grid-template-columns:.9fr 1.1fr;gap:8%}
 .about-body{max-width:700px;color:#D5E0DC}.about-body p{margin-top:0;margin-bottom:1.2rem}
 .about-intro h2{font-size:clamp(2.6rem,4.5vw,4.3rem)}
+.about-cv{margin-top:12px}
+.about-cv:focus-visible{outline:3px solid var(--white);outline-offset:5px}
 .about-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;border-top:1px solid rgba(255,255,255,.2);margin-top:30px;padding-top:22px}
 .about-facts div{display:flex;flex-direction:column;gap:7px}.about-facts strong{color:var(--tomato);font: .7rem "DM Mono",monospace;text-transform:uppercase}.about-facts span{font-size:.83rem}
 .skills-section{background:var(--cream)}

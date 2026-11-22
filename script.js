@@ -68,10 +68,3 @@ const signatureFont = document.fonts ? document.fonts.load('126px Allura', 'Milo
 signatureFont.catch(() => {}).then(() => { fontReady = true; scheduleUpdate(); });
 measurePortrait();
 updatePortrait();
-
-const textMotionToggle = document.querySelector('#toggle-text-motion');
-textMotionToggle.addEventListener('click', () => {
-  const paused = document.querySelector('.backdrop-type').classList.toggle('is-paused');
-  textMotionToggle.setAttribute('aria-pressed', String(paused));
-  textMotionToggle.textContent = paused ? 'Play text' : 'Pause text';
-});
